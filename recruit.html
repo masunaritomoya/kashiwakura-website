@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="株式会社かしわくらの採用情報。営業・技術スタッフ募集中。やる気のある方大歓迎！LINEまたはお電話でお気軽にご応募ください。" />
+  <title>採用情報 | 株式会社かしわくら</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ===== Recruit page extras ===== */
+
+    /* Sticky apply CTA bar */
+    .apply-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 900;
+      background: rgba(26, 26, 26, 0.96);
+      backdrop-filter: blur(8px);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+    }
+
+    .apply-bar-text {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.85rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .btn-line {
+      background: #06C755;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: var(--radius-pill);
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: var(--font);
+      text-decoration: none;
+    }
+
+    .btn-line:hover {
+      background: #05b34c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(6,199,85,0.4);
+      opacity: 1;
+    }
+
+    .btn-tel {
+      background: var(--primary);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--radius-pill);
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition);
+      font-family: var(--font);
+      text-decoration: none;
+    }
+
+    .btn-tel:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(97,147,191,0.4);
+      opacity: 1;
+    }
+
+    /* Job cards enhanced */
+    .job-dept-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.08em;
+    }
+
+    .dept-sales { background: rgba(51,141,244,0.15); color: var(--accent); border: 1px solid rgba(51,141,244,0.3); }
+    .dept-tech  { background: rgba(97,147,191,0.15); color: var(--primary-dark); border: 1px solid rgba(97,147,191,0.3); }
+    .dept-cs    { background: rgba(98,216,71,0.15); color: var(--accent-green-dark); border: 1px solid rgba(98,216,71,0.3); }
+    .dept-mgmt  { background: rgba(200,151,58,0.12); color: #a07820; border: 1px solid rgba(200,151,58,0.3); }
+
+    .salary-highlight {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 4px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 900;
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    .salary-unit { font-size: 0.85rem; font-weight: 700; }
+
+    .salary-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+
+    .salary-card-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* Selection criteria */
+    .criteria-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .criteria-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      border: 1.5px solid var(--border-light);
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: all var(--transition);
+    }
+
+    .criteria-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .criteria-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .criteria-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .criteria-desc {
+      font-size: 0.84rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* LINE apply section */
+    .apply-section {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      padding: 80px 0 100px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .apply-section::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: rgba(6,199,85,0.08);
+    }
+
+    .apply-section::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: 10%;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(97,147,191,0.1);
+    }
+
+    .apply-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .apply-content h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    .apply-content p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.9;
+      margin-bottom: 10px;
+    }
+
+    .apply-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .apply-method-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      backdrop-filter: blur(4px);
+      transition: all var(--transition);
+    }
+
+    .apply-method-card:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.3);
+    }
+
+    .apply-method-card.line-card {
+      border-color: rgba(6,199,85,0.4);
+      background: rgba(6,199,85,0.08);
+    }
+
+    .apply-method-card.line-card:hover {
+      background: rgba(6,199,85,0.14);
+    }
+
+    .apply-method-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 10px;
+    }
+
+    .apply-method-label.line { color: #06C755; }
+
+    .apply-method-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .apply-method-detail {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .tel-number {
+      font-size: 1.7rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      color: #fff;
+    }
+
+    .line-id {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #06C755;
+    }
+
+    /* Conditions table */
+    .conditions-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .conditions-table tr { border-bottom: 1px solid var(--border-light); }
+    .conditions-table tr:last-child { border-bottom: none; }
+
+    .conditions-table th {
+      width: 180px;
+      padding: 18px 24px;
+      background: var(--primary);
+      color: rgba(255,255,255,0.95);
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .conditions-table td {
+      padding: 18px 28px;
+      font-size: 0.9rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .cond-tag {
+      display: inline-block;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text-light);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      margin: 2px 4px 2px 0;
+    }
+
+    @media (max-width: 768px) {
+      .apply-inner { grid-template-columns: 1fr; gap: 36px; }
+      .criteria-grid { grid-template-columns: 1fr; }
+      .apply-bar { flex-wrap: wrap; gap: 10px; padding: 12px 16px; }
+      .apply-bar-text { display: none; }
+      .tel-number { font-size: 1.3rem; }
+    }
+
+    @media (max-width: 480px) {
+      .conditions-table th { width: 110px; padding: 14px 16px; font-size: 0.8rem; }
+      .conditions-table td { padding: 14px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-main">株式会社かしわくら</span>
+      <span class="logo-sub">Kashiwakura Co., Ltd.</span>
+    </a>
+
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">トップページ</a></li>
+        <li><a href="company.html">会社案内</a></li>
+        <li><a href="recruit.html" class="active">採用情報</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html">トップページ</a></li>
+    <li><a href="company.html">会社案内</a></li>
+    <li><a href="recruit.html">採用情報</a></li>
+  </ul>
+</div>
+
+
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="パンくず">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>採用情報</span>
+    </nav>
+    <h1 class="page-hero-title">採用情報</h1>
+    <p class="page-hero-en">Recruit</p>
+  </div>
+</div>
+
+<!-- ===== INTRO ===== -->
+<section class="recruit-intro-section">
+  <div class="container">
+    <div class="recruit-intro-inner fade-in">
+      <h2 class="recruit-intro-title">
+        必要なのは、<br><span style="color:var(--primary);">「やる気」</span>だけ。
+      </h2>
+      <p class="recruit-intro-text">
+        資格や経験は問いません。「やってみたい」「頑張りたい」というあなたのやる気を最大限に活かせる環境を用意しています。<br>
+        営業・技術・サポートなど、あなたの得意を活かせるポジションで、ぜひ一緒に働きましょう。<br>
+        採用はLINEまたはお電話で受け付けています。まずはお気軽にご連絡ください！
+      </p>
+      <div style="display:flex; justify-content:center; gap:16px; margin-top:28px; flex-wrap:wrap;">
+        <a href="#apply" class="btn-line">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          LINEで応募する
+        </a>
+        <a href="tel:000-000-0000" class="btn-tel">📞 電話で問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPEAL POINTS ===== -->
+<section class="appeal-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-title-en">Why Join Us</p>
+      <h2 class="section-title">ここで働く魅力</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:1px solid #d0d0d0;" class="stagger">
+      <div class="fade-in" style="padding:52px 40px; border-right:1px solid #d0d0d0;">
+        <p style="font-size:0.68rem; letter-spacing:0.22em; color:#999; text-transform:uppercase; margin-bottom:28px;">01</p>
+        <h3 style="font-family:'Georgia','Noto Serif JP',serif; font-size:1.15rem; font-weight:400; color:#1a1a1a; letter-spacing:0.04em; margin-bottom:20px; line-height:1.5;">テキストテキストテキスト</h3>
+        <p style="font-size:0.85rem; color:#666; line-height:1.9; margin:0;">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+      <div class="fade-in" style="padding:52px 40px; border-right:1px solid #d0d0d0;">
+        <p style="font-size:0.68rem; letter-spacing:0.22em; color:#999; text-transform:uppercase; margin-bottom:28px;">02</p>
+        <h3 style="font-family:'Georgia','Noto Serif JP',serif; font-size:1.15rem; font-weight:400; color:#1a1a1a; letter-spacing:0.04em; margin-bottom:20px; line-height:1.5;">テキストテキストテキスト</h3>
+        <p style="font-size:0.85rem; color:#666; line-height:1.9; margin:0;">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+      <div class="fade-in" style="padding:52px 40px;">
+        <p style="font-size:0.68rem; letter-spacing:0.22em; color:#999; text-transform:uppercase; margin-bottom:28px;">03</p>
+        <h3 style="font-family:'Georgia','Noto Serif JP',serif; font-size:1.15rem; font-weight:400; color:#1a1a1a; letter-spacing:0.04em; margin-bottom:20px; line-height:1.5;">テキストテキストテキスト</h3>
+        <p style="font-size:0.85rem; color:#666; line-height:1.9; margin:0;">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JOB DEPARTMENTS ===== -->
+<section class="jobs-section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-title-en">Job Openings</p>
+      <h2 class="section-title">募集職種</h2>
+      <p class="section-lead">あなたの強みを活かせる部門で、一緒に働きませんか？</p>
+      <div class="divider"></div>
+    </div>
+
+    <!-- アルバイト（レジバイト） -->
+    <div class="job-card fade-in">
+      <div class="job-header">
+        <div>
+          <span class="job-dept-badge dept-sales" style="margin-bottom:8px; display:inline-flex;">アルバイト</span>
+          <h3 class="job-title">レジバイト・土日レジバイト</h3>
+        </div>
+        <span class="job-badge">パート・アルバイト</span>
+      </div>
+      <div class="job-body">
+        <div style="display:flex; gap:16px; margin-bottom:24px; flex-wrap:wrap;">
+          <div class="salary-card">
+            <div class="salary-card-label">平日時給</div>
+            <div><span class="salary-highlight">1,200<span class="salary-unit">円</span></span></div>
+          </div>
+          <div class="salary-card" style="border-color: var(--accent); background: rgba(51,141,244,0.04);">
+            <div class="salary-card-label" style="color: var(--accent);">土日・17時以降</div>
+            <div><span class="salary-highlight" style="background: linear-gradient(135deg, var(--accent), #06C755); -webkit-background-clip: text; background-clip: text;">+50<span class="salary-unit">円</span></span></div>
+          </div>
+        </div>
+        <table class="job-table">
+          <tbody>
+            <tr>
+              <th>仕事内容</th>
+              <td>レジ業務（つり銭・つり札機使用のため安心）</td>
+            </tr>
+            <tr>
+              <th>勤務時間</th>
+              <td>
+                ①9:00〜13:00　②13:00〜17:00　③16:00〜20:00<br>
+                週2〜4日程度
+              </td>
+            </tr>
+            <tr>
+              <th>応募資格</th>
+              <td>高校生・主婦の方歓迎。経験不問。<br>
+                <span class="cond-tag">試用期間 時給1,050円</span>
+              </td>
+            </tr>
+            <tr>
+              <th>勤務地</th>
+              <td>キング サンモール店・東大通店・かしわくら（衣料）</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="job-footer">
+        <a href="#apply" class="btn-line">LINEで応募する</a>
+      </div>
+    </div>
+
+    <!-- フロア部門 -->
+    <div class="job-card fade-in">
+      <div class="job-header" style="background: var(--primary-dark);">
+        <div>
+          <span class="job-dept-badge dept-tech" style="margin-bottom:8px; display:inline-flex; background:rgba(255,255,255,0.15); color:#fff; border-color:rgba(255,255,255,0.3);">フロア部門</span>
+          <h3 class="job-title">フルタイム・準フルタイム・レジパート</h3>
+        </div>
+        <span class="job-badge">通勤手当あり</span>
+      </div>
+      <div class="job-body">
+        <div style="display:flex; gap:16px; margin-bottom:24px; flex-wrap:wrap;">
+          <div class="salary-card">
+            <div class="salary-card-label">平日時給</div>
+            <div><span class="salary-highlight">1,200<span class="salary-unit">円</span></span></div>
+          </div>
+          <div class="salary-card" style="border-color: var(--accent); background: rgba(51,141,244,0.04);">
+            <div class="salary-card-label" style="color: var(--accent);">土日</div>
+            <div><span class="salary-highlight" style="background: linear-gradient(135deg, var(--accent), #06C755); -webkit-background-clip: text; background-clip: text;">+50<span class="salary-unit">円</span></span></div>
+          </div>
+        </div>
+        <table class="job-table">
+          <tbody>
+            <tr>
+              <th>フルタイム</th>
+              <td>週休2日・40時間/週　8:00〜17:00 / 11:00〜20:00（2回）<br>業績・業務能力によって昇給あり</td>
+            </tr>
+            <tr>
+              <th>新・準フルタイム</th>
+              <td>週休2日・31時間/週　8:00〜13:00（2回）/ 8:00〜17:00（2回）/ 15:00〜20:00（1回）<br>社会保険加入　家事が忙しい方にもオススメ</td>
+            </tr>
+            <tr>
+              <th>レジパート</th>
+              <td>4日勤務・16時間/週　①9:00〜13:00　②13:00〜17:00<br>40〜50代の方・未経験OK。つり銭・つり札機使用</td>
+            </tr>
+            <tr>
+              <th>応募資格</th>
+              <td>
+                <span class="cond-tag">試用期間 時給1,000円</span>
+                <span class="cond-tag">女性も歓迎</span>
+              </td>
+            </tr>
+            <tr>
+              <th>勤務地</th>
+              <td>キングサンモール店・東大通店</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="job-footer">
+        <a href="#apply" class="btn-line">LINEで応募する</a>
+      </div>
+    </div>
+
+    <!-- 鮮魚部門 -->
+    <div class="job-card fade-in">
+      <div class="job-header" style="background: #1a6fa8;">
+        <div>
+          <span class="job-dept-badge dept-cs" style="margin-bottom:8px; display:inline-flex; background:rgba(255,255,255,0.15); color:#fff; border-color:rgba(255,255,255,0.3);">鮮魚部門</span>
+          <h3 class="job-title">技術者（経験者・未経験者）・パートタイム</h3>
+        </div>
+        <span class="job-badge">通勤手当あり</span>
+      </div>
+      <div class="job-body">
+        <div style="display:flex; gap:16px; margin-bottom:24px; flex-wrap:wrap;">
+          <div class="salary-card">
+            <div class="salary-card-label">経験者 平日時給</div>
+            <div><span class="salary-highlight">1,400<span class="salary-unit">円</span></span></div>
+          </div>
+          <div class="salary-card">
+            <div class="salary-card-label">未経験者 平日時給</div>
+            <div><span class="salary-highlight">1,300<span class="salary-unit">円</span></span></div>
+          </div>
+          <div class="salary-card" style="border-color: var(--accent); background: rgba(51,141,244,0.04);">
+            <div class="salary-card-label" style="color: var(--accent);">土日</div>
+            <div><span class="salary-highlight" style="background: linear-gradient(135deg, var(--accent), #06C755); -webkit-background-clip: text; background-clip: text;">+50<span class="salary-unit">円</span></span></div>
+          </div>
+        </div>
+        <table class="job-table">
+          <tbody>
+            <tr>
+              <th>技術者（経験者）</th>
+              <td>週休2日・40時間/週　8:00〜17:00<br>魚の仕事に慣れている方歓迎。業績によって昇給あり。</td>
+            </tr>
+            <tr>
+              <th>技術者（未経験者）</th>
+              <td>週休2日・40時間/週　8:00〜17:00<br>やる気があればOK。経験がなくても丁寧に指導します。</td>
+            </tr>
+            <tr>
+              <th>パートタイム</th>
+              <td>4日勤務・16時間/週　8:00〜12:00　平日時給1,200円（土日+50円）<br>60代の方・魚の仕事に慣れている方歓迎</td>
+            </tr>
+            <tr>
+              <th>応募資格</th>
+              <td>
+                <span class="cond-tag">試用期間 時給1,050円</span>
+                <span class="cond-tag">転勤あり（面接時に計算テストあり）</span>
+              </td>
+            </tr>
+            <tr>
+              <th>勤務地</th>
+              <td>キングサンモール店・キング東大通店</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="job-footer">
+        <a href="#apply" class="btn-line">LINEで応募する</a>
+      </div>
+    </div>
+
+    <!-- 配送部門 -->
+    <div class="job-card fade-in">
+      <div class="job-header" style="background: #5a3a6e;">
+        <div>
+          <span class="job-dept-badge" style="margin-bottom:8px; display:inline-flex; background:rgba(255,255,255,0.15); color:#ddb8ff; border-color:rgba(221,184,255,0.4);">配送部門</span>
+          <h3 class="job-title">魚市場配送・準フルタイム・パートタイム</h3>
+        </div>
+        <span class="job-badge">通勤手当あり</span>
+      </div>
+      <div class="job-body">
+        <div style="display:flex; gap:16px; margin-bottom:24px; flex-wrap:wrap;">
+          <div class="salary-card">
+            <div class="salary-card-label">平日時給</div>
+            <div><span class="salary-highlight">1,200<span class="salary-unit">円</span></span></div>
+          </div>
+          <div class="salary-card" style="border-color: var(--accent); background: rgba(51,141,244,0.04);">
+            <div class="salary-card-label" style="color: var(--accent);">土日</div>
+            <div><span class="salary-highlight" style="background: linear-gradient(135deg, var(--accent), #06C755); -webkit-background-clip: text; background-clip: text;">+50<span class="salary-unit">円</span></span></div>
+          </div>
+        </div>
+        <table class="job-table">
+          <tbody>
+            <tr>
+              <th>魚市場配送</th>
+              <td>週3〜4日程度　7:00〜12:00<br>65才まで応募可能。両津エリアにお住まいの方歓迎。</td>
+            </tr>
+            <tr>
+              <th>準フルタイム</th>
+              <td>8:00〜13:00（3日）・8:00〜17:00（2日）　週31時間程度<br>佐渡汽船からキング各店に荷物を運びます。体力に自信のある方・男女ともに歓迎。</td>
+            </tr>
+            <tr>
+              <th>パートタイム</th>
+              <td>週3〜4日　8:00〜13:00<br>ライフワークバランスを大切にする方にオススメ。65才まで応募可能。</td>
+            </tr>
+            <tr>
+              <th>応募資格</th>
+              <td>
+                <span class="cond-tag">試用期間 時給1,050円</span>
+                <span class="cond-tag">体力に自信のある方</span>
+              </td>
+            </tr>
+            <tr>
+              <th>勤務地</th>
+              <td>かしわくら東大通店</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="job-footer">
+        <a href="#apply" class="btn-line">LINEで応募する</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== COMMON CONDITIONS ===== -->
+<section class="section" style="background: var(--bg);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-title-en">Working Conditions</p>
+      <h2 class="section-title">共通の待遇・条件</h2>
+      <p class="section-lead">全職種共通の勤務条件・待遇です。</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="fade-in">
+      <table class="conditions-table">
+        <tbody>
+          <tr>
+            <th>給与</th>
+            <td>
+              <strong>平日：時給 1,300円</strong><br>
+              <strong>土日：時給 1,350円（+50円）</strong><br>
+              ※経験・スキルにより優遇あり　※昇給制度あり（年1回）
+            </td>
+          </tr>
+          <tr>
+            <th>勤務時間</th>
+            <td>
+              <strong>8:00〜17:00（実働8時間）</strong><br>
+              ※休憩60分含む / 残業は月10時間以内を目標に管理
+            </td>
+          </tr>
+          <tr>
+            <th>勤務日数</th>
+            <td>
+              <strong>週5日・週40時間</strong>（週休2日制）<br>
+              ※一部ポジションは週3日〜・短時間勤務相談可
+            </td>
+          </tr>
+          <tr>
+            <th>休日・休暇</th>
+            <td>
+              土曜・日曜・祝日休み（年間休日120日）<br>
+              有給休暇あり / 慶弔休暇 / 産育休（取得実績あり）
+            </td>
+          </tr>
+          <tr>
+            <th>交通費</th>
+            <td>全額支給（規定上限なし）</td>
+          </tr>
+          <tr>
+            <th>社会保険</th>
+            <td>雇用・健康・厚生年金・労災（条件を満たす場合）</td>
+          </tr>
+          <tr>
+            <th>その他待遇</th>
+            <td>
+              制服貸与 / 社員割引制度あり<br>
+              正社員登用制度（実績多数） / 研修・OJT制度
+            </td>
+          </tr>
+          <tr>
+            <th>勤務地</th>
+            <td>○○県○○市内の各店舗・現場（転勤なし）</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SELECTION CRITERIA ===== -->
+<section class="section" style="background: var(--bg-white);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-title-en">Who We're Looking For</p>
+      <h2 class="section-title">こんな方を求めています</h2>
+      <p class="section-lead">資格や経験よりも「人柄」と「やる気」を重視しています。</p>
+      <div class="divider"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:0; border:1px solid #d0d0d0; max-width:800px; margin:0 auto;" class="stagger">
+      <div class="fade-in" style="padding:40px 36px; border-right:1px solid #d0d0d0; border-bottom:1px solid #d0d0d0;">
+        <h4 style="font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:12px;">テキストテキストテキスト</h4>
+        <p style="font-size:0.84rem; color:#666; line-height:1.9; margin:0;">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+      <div class="fade-in" style="padding:40px 36px; border-bottom:1px solid #d0d0d0;">
+        <h4 style="font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:12px;">テキストテキストテキスト</h4>
+        <p style="font-size:0.84rem; color:#666; line-height:1.9; margin:0;">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+      <div class="fade-in" style="padding:40px 36px; border-right:1px solid #d0d0d0; border-bottom:1px solid #d0d0d0;">
+        <h4 style="font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:12px;">テキストテキストテキスト</h4>
+        <p style="font-size:0.84rem; color:#666; line-height:1.9; margin:0;">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+      <div class="fade-in" style="padding:40px 36px; border-bottom:1px solid #d0d0d0;">
+        <h4 style="font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:12px;">テキストテキストテキスト</h4>
+        <p style="font-size:0.84rem; color:#666; line-height:1.9; margin:0;">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+      <div class="fade-in" style="padding:40px 36px; border-right:1px solid #d0d0d0;">
+        <h4 style="font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:12px;">テキストテキストテキスト</h4>
+        <p style="font-size:0.84rem; color:#666; line-height:1.9; margin:0;">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+      <div class="fade-in" style="padding:40px 36px;">
+        <h4 style="font-size:0.95rem; font-weight:700; color:var(--text); margin-bottom:12px;">テキストテキストテキスト</h4>
+        <p style="font-size:0.84rem; color:#666; line-height:1.9; margin:0;">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RECRUITMENT FLOW ===== -->
+<section class="section" style="background: var(--bg);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-title-en">Recruitment Flow</p>
+      <h2 class="section-title">採用の流れ</h2>
+      <p class="section-lead">LINEか電話でご連絡いただくだけ。難しい手続きは一切ありません。</p>
+      <div class="divider"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; border:1px solid #d0d0d0; max-width:900px; margin:0 auto;" class="stagger">
+      <div class="fade-in" style="padding:40px 28px; border-right:1px solid #d0d0d0; text-align:center;">
+        <p style="font-size:0.68rem; letter-spacing:0.22em; color:#999; text-transform:uppercase; margin-bottom:20px;">STEP 01</p>
+        <h4 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin-bottom:12px;">LINEまたは電話</h4>
+        <p style="font-size:0.82rem; color:#666; line-height:1.8; margin:0;">「ちょっと気になる」の一言でOK。まずお気軽にご連絡ください。</p>
+      </div>
+      <div class="fade-in" style="padding:40px 28px; border-right:1px solid #d0d0d0; text-align:center;">
+        <p style="font-size:0.68rem; letter-spacing:0.22em; color:#999; text-transform:uppercase; margin-bottom:20px;">STEP 02</p>
+        <h4 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin-bottom:12px;">日程調整</h4>
+        <p style="font-size:0.82rem; color:#666; line-height:1.8; margin:0;">ご都合に合わせてお会いする日程をLINEや電話で決めます。</p>
+      </div>
+      <div class="fade-in" style="padding:40px 28px; border-right:1px solid #d0d0d0; text-align:center;">
+        <p style="font-size:0.68rem; letter-spacing:0.22em; color:#999; text-transform:uppercase; margin-bottom:20px;">STEP 03</p>
+        <h4 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin-bottom:12px;">軽くおしゃべり</h4>
+        <p style="font-size:0.82rem; color:#666; line-height:1.8; margin:0;">堅苦しくありません。気軽にお話しながら、お互いのことを知りましょう。</p>
+      </div>
+      <div class="fade-in" style="padding:40px 28px; text-align:center;">
+        <p style="font-size:0.68rem; letter-spacing:0.22em; color:#999; text-transform:uppercase; margin-bottom:20px;">STEP 04</p>
+        <h4 style="font-size:0.95rem; font-weight:700; color:var(--primary); margin-bottom:12px;">採用・研修スタート</h4>
+        <p style="font-size:0.82rem; color:#666; line-height:1.8; margin:0;">採用後は研修からスタート。先輩が丁寧にサポートします。</p>
+      </div>
+    </div>
+    <p style="text-align:center; font-size:0.82rem; color:var(--text-muted); margin-top:20px; max-width:900px; margin-left:auto; margin-right:auto;" class="fade-in">
+      ※テキストテキスト。必要であれば入力可能。
+    </p>
+  </div>
+</section>
+
+<!-- ===== STAFF VOICES ===== -->
+<section class="section" style="background: var(--bg-white);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-title-en">Staff Voice</p>
+      <h2 class="section-title">スタッフの声</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:1px solid #d0d0d0;" class="stagger">
+      <div class="fade-in" style="padding:40px 32px; border-right:1px solid #d0d0d0;">
+        <div style="font-size:2rem; color:var(--primary); line-height:1; margin-bottom:16px; font-family:Georgia,serif;">"</div>
+        <p style="font-size:0.88rem; color:var(--text-light); line-height:1.9; margin-bottom:24px;">
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+        <div style="font-size:0.82rem; font-weight:700; color:var(--text);">田中 さん</div>
+        <div style="font-size:0.72rem; color:var(--text-muted); margin-top:4px;">入社3年目 / スタッフ</div>
+      </div>
+      <div class="fade-in" style="padding:40px 32px; border-right:1px solid #d0d0d0;">
+        <div style="font-size:2rem; color:var(--primary); line-height:1; margin-bottom:16px; font-family:Georgia,serif;">"</div>
+        <p style="font-size:0.88rem; color:var(--text-light); line-height:1.9; margin-bottom:24px;">
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+        <div style="font-size:0.82rem; font-weight:700; color:var(--text);">鈴木 さん</div>
+        <div style="font-size:0.72rem; color:var(--text-muted); margin-top:4px;">入社4年目 / スタッフ</div>
+      </div>
+      <div class="fade-in" style="padding:40px 32px;">
+        <div style="font-size:2rem; color:var(--primary); line-height:1; margin-bottom:16px; font-family:Georgia,serif;">"</div>
+        <p style="font-size:0.88rem; color:var(--text-light); line-height:1.9; margin-bottom:24px;">
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+        <div style="font-size:0.82rem; font-weight:700; color:var(--text);">佐藤 さん</div>
+        <div style="font-size:0.72rem; color:var(--text-muted); margin-top:4px;">入社5年目 / スタッフ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" style="background: var(--bg);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-title-en">FAQ</p>
+      <h2 class="section-title">よくあるご質問</h2>
+      <div class="divider"></div>
+    </div>
+    <div style="max-width:760px; margin:0 auto;" class="stagger">
+      <div class="fade-in" style="background:var(--bg-white); border-radius:var(--radius); padding:20px 24px; margin-bottom:12px; border:1px solid var(--border-light);">
+        <details>
+          <summary style="font-size:0.93rem; font-weight:700; color:var(--text); list-style:none; display:flex; justify-content:space-between; cursor:pointer;">
+            <span><span style="color:var(--primary); margin-right:8px;">Q.</span>未経験でも応募できますか？</span>
+            <span style="color:var(--primary);">＋</span>
+          </summary>
+          <p style="font-size:0.86rem; color:var(--text-light); line-height:1.85; margin-top:12px; padding-left:22px;">
+            はい、全職種において経験・資格は不問です。大切なのは「やる気」と「人柄」。先輩スタッフが丁寧に教えます。
+          </p>
+        </details>
+      </div>
+      <div class="fade-in" style="background:var(--bg-white); border-radius:var(--radius); padding:20px 24px; margin-bottom:12px; border:1px solid var(--border-light);">
+        <details>
+          <summary style="font-size:0.93rem; font-weight:700; color:var(--text); list-style:none; display:flex; justify-content:space-between; cursor:pointer;">
+            <span><span style="color:var(--primary); margin-right:8px;">Q.</span>LINEで応募するとどうなりますか？</span>
+            <span style="color:var(--primary);">＋</span>
+          </summary>
+          <p style="font-size:0.86rem; color:var(--text-light); line-height:1.85; margin-top:12px; padding-left:22px;">
+            LINEでメッセージを送っていただくと、担当者から返信が届きます。「応募したい」「話を聞きたい」など、一言でOKです。
+            面接の日程などはLINE上でやりとりできます。
+          </p>
+        </details>
+      </div>
+      <div class="fade-in" style="background:var(--bg-white); border-radius:var(--radius); padding:20px 24px; margin-bottom:12px; border:1px solid var(--border-light);">
+        <details>
+          <summary style="font-size:0.93rem; font-weight:700; color:var(--text); list-style:none; display:flex; justify-content:space-between; cursor:pointer;">
+            <span><span style="color:var(--primary); margin-right:8px;">Q.</span>履歴書は必要ですか？</span>
+            <span style="color:var(--primary);">＋</span>
+          </summary>
+          <p style="font-size:0.86rem; color:var(--text-light); line-height:1.85; margin-top:12px; padding-left:22px;">
+            面接時にお持ちいただければOKです。難しい場合は事前にご相談ください。手書きでも印刷でも構いません。
+          </p>
+        </details>
+      </div>
+      <div class="fade-in" style="background:var(--bg-white); border-radius:var(--radius); padding:20px 24px; margin-bottom:12px; border:1px solid var(--border-light);">
+        <details>
+          <summary style="font-size:0.93rem; font-weight:700; color:var(--text); list-style:none; display:flex; justify-content:space-between; cursor:pointer;">
+            <span><span style="color:var(--primary); margin-right:8px;">Q.</span>パートから正社員になれますか？</span>
+            <span style="color:var(--primary);">＋</span>
+          </summary>
+          <p style="font-size:0.86rem; color:var(--text-light); line-height:1.85; margin-top:12px; padding-left:22px;">
+            はい！正社員登用制度があり、実際に多くのスタッフがパート・アルバイトからキャリアアップしています。
+            「将来的に正社員を目指したい」という方も大歓迎です。
+          </p>
+        </details>
+      </div>
+      <div class="fade-in" style="background:var(--bg-white); border-radius:var(--radius); padding:20px 24px; border:1px solid var(--border-light);">
+        <details>
+          <summary style="font-size:0.93rem; font-weight:700; color:var(--text); list-style:none; display:flex; justify-content:space-between; cursor:pointer;">
+            <span><span style="color:var(--primary); margin-right:8px;">Q.</span>扶養内・短時間で働けますか？</span>
+            <span style="color:var(--primary);">＋</span>
+          </summary>
+          <p style="font-size:0.86rem; color:var(--text-light); line-height:1.85; margin-top:12px; padding-left:22px;">
+            はい、対応可能です。週3日〜・1日4時間〜なども相談に応じます。
+            面接時にご希望をお伝えいただければ、一緒に最適なシフトを考えます。
+          </p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPLY (LINE + TEL) ===== -->
+<section id="apply" style="background: var(--bg); padding: 80px 0;">
+  <div class="container">
+    <div class="section-header fade-in">
+      <p class="section-title-en">Apply Now</p>
+      <h2 class="section-title">お問い合わせ・ご応募</h2>
+      <p class="section-lead">難しく考えなくてOK。「ちょっと興味ある」だけで大丈夫です。</p>
+      <div class="divider"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid #d0d0d0; max-width:800px; margin:0 auto;" class="fade-in">
+      <!-- LINE -->
+      <div style="padding:48px 40px; border-right:1px solid #d0d0d0;">
+        <p style="font-size:0.72rem; letter-spacing:0.2em; color:#999; text-transform:uppercase; margin-bottom:20px;">LINE</p>
+        <h3 style="font-size:1.1rem; font-weight:700; color:var(--text); margin-bottom:16px;">LINEで問い合わせ</h3>
+        <p style="font-size:0.85rem; color:#666; line-height:1.9; margin-bottom:28px;">
+          「採用について聞きたい」「応募したい」など、一言メッセージするだけ。<br>
+          採用担当からご返信します。<br>
+          <span style="font-size:0.78rem; color:#999;">※ LINEは24時間受付（返信は8:00〜17:00）</span>
+        </p>
+        <a href="https://lin.ee/XRO5VTy" target="_blank" rel="noopener" class="btn-line">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          LINEで問い合わせる
+        </a>
+      </div>
+      <!-- TEL -->
+      <div style="padding:48px 40px;">
+        <p style="font-size:0.72rem; letter-spacing:0.2em; color:#999; text-transform:uppercase; margin-bottom:20px;">TEL</p>
+        <h3 style="font-size:1.1rem; font-weight:700; color:var(--text); margin-bottom:16px;">電話で問い合わせ</h3>
+        <p style="font-size:0.85rem; color:#666; line-height:1.9; margin-bottom:28px;">
+          「採用について」とお伝えください。担当者がお答えします。<br>
+          <br>
+          <span style="font-size:0.78rem; color:#999;">受付時間：8:00〜17:00</span>
+        </p>
+        <a href="tel:0259-57-2356" class="btn-tel" style="font-size:1rem; letter-spacing:0.05em;">0259-57-2356</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="footer-simple">
+    <div class="footer-simple-inner container">
+      <div class="footer-simple-left">
+        <span class="footer-logo-main">株式会社かしわくら</span>
+        <span class="footer-simple-address">〒952-1314 新潟県佐渡市八幡2120　TEL: 0259-57-2356</span>
+      </div>
+      <nav class="footer-simple-nav">
+        <a href="index.html">TOP</a>
+        <a href="index.html#store">店舗情報</a>
+        <a href="company.html">会社案内</a>
+        <a href="recruit.html">採用情報</a>
+        <a href="#">プライバシーポリシー</a>
+      </nav>
+    </div>
+    <div class="footer-simple-bottom container">
+      <p>&copy; 2025 株式会社かしわくら. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== FIXED APPLY BAR ===== -->
+<div class="apply-bar" id="applyBar">
+  <span class="apply-bar-text">採用のご相談・ご応募はこちら</span>
+  <a href="https://lin.ee/XRO5VTy" target="_blank" rel="noopener" class="btn-line">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    LINEで応募
+  </a>
+  <a href="tel:0259-57-2356" class="btn-tel" style="padding:10px 20px; font-size:0.88rem;">0259-57-2356</a>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  // Hide apply bar when scrolled to the apply section
+  const applyBar = document.getElementById('applyBar');
+  const applySection = document.getElementById('apply');
+  if (applyBar && applySection) {
+    const obs = new IntersectionObserver(entries => {
+      applyBar.style.display = entries[0].isIntersecting ? 'none' : 'flex';
+    }, { threshold: 0.1 });
+    obs.observe(applySection);
+  }
+
+  // Add bottom padding to body for apply bar
+  document.body.style.paddingBottom = '72px';
+</script>
+</body>
+</html>
