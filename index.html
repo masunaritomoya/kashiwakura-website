@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,49 +8,52 @@
   <title>株式会社かしわくら | TOPページ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-<!-- ===== HEADER ===== -->
-<header id="header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">
-      <span class="logo-main">株式会社かしわくら</span>
-      <span class="logo-sub">Company Name Inc.</span>
-    </a>
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-main">株式会社かしわくら</span>
+        <span class="logo-sub">Company Name Inc.</span>
+      </a>
 
-    <nav>
-      <ul class="nav-list">
-        <li><a href="index.html" class="active">トップページ</a></li>
-        <li><a href="company.html">会社案内</a></li>
-        <li><a href="recruit.html">採用情報</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">トップページ</a></li>
+          <li><a href="company.html">会社案内</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+        </ul>
+      </nav>
 
-    <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <button class="hamburger" id="hamburger" aria-label="メニュー" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">トップページ</a></li>
+      <li><a href="company.html">会社案内</a></li>
+      <li><a href="recruit.html">採用情報</a></li>
+    </ul>
   </div>
-</header>
-
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <ul>
-    <li><a href="index.html">トップページ</a></li>
-    <li><a href="company.html">会社案内</a></li>
-    <li><a href="recruit.html">採用情報</a></li>
-  </ul>
-</div>
 
 
-<!-- ===== HERO ===== -->
-<section id="hero" aria-label="メインビジュアル">
+  <!-- ===== HERO ===== -->
+  <section id="hero" aria-label="メインビジュアル">
   <div class="hero-bg">
-    <img src="images/hero.jpg" alt="佐渡の新鮮な魚介が並ぶショッピングプラザ キングの鮮魚コーナー" />
+    <img src="images/キングサンモール_鮮魚_1.1MB.jpg" alt="佐渡の新鮮な魚介が並ぶショッピングプラザ キングの鮮魚コーナー" class="hero-img hero-img-1" />
+    <img src="images/かしわくら_レジ前.jpg" alt="かしわくら レジ前" class="hero-img hero-img-2" />
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -60,266 +64,279 @@
         佐渡島内6店舗で、新鮮な地魚や島の食材をお届けしています。<br>
         キング・かしわくら、いつもそばにいます。
       </p>
-      <div class="hero-btns">
-        <a href="#campaign" class="btn btn-white btn-lg">お得情報を見る <span class="chevron"></span></a>
-        <a href="https://lin.ee/XRO5VTy" target="_blank" rel="noopener" class="btn btn-line-hero btn-lg">LINEで最新情報 <span class="chevron"></span></a>
-      </div>
     </div>
   </div>
 </section>
 
 
-<!-- ===== CAMPAIGN ===== -->
-<section id="campaign" class="section">
-  <div class="container">
-    <div class="section-header fade-in">
-      <p class="section-title-en">Campaign</p>
-      <h2 class="section-title">キャンペーン・お得情報</h2>
-      <p class="section-lead">最新のキャンペーン情報はLINEで毎週配信しています。</p>
-      <div class="divider"></div>
+  <!-- ===== CAMPAIGN ===== -->
+  <section id="campaign" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-title-en">Campaign</p>
+        <h2 class="section-title">キャンペーン・お得情報</h2>
+        <p class="section-lead">最新のキャンペーン情報はLINEで毎週配信しています。</p>
+        <div class="divider"></div>
+      </div>
+
+      <!-- LINE誘導バナー -->
+      <a href="https://lin.ee/XRO5VTy" target="_blank" rel="noopener" class="campaign-line-banner fade-in">
+        <div class="campaign-line-banner-left">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="#06C755">
+            <path
+              d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+          </svg>
+          <div>
+            <div class="campaign-line-banner-title">毎週のお得情報、LINEで配信中</div>
+            <div class="campaign-line-banner-desc">友だち登録するだけで、キャンペーン情報がいち早く届きます</div>
+          </div>
+        </div>
+        <div class="campaign-line-banner-btn">友だち追加 →</div>
+      </a>
+
     </div>
+  </section>
 
-    <!-- LINE誘導バナー -->
-    <a href="https://lin.ee/XRO5VTy" target="_blank" rel="noopener" class="campaign-line-banner fade-in">
-      <div class="campaign-line-banner-left">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="#06C755"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-        <div>
-          <div class="campaign-line-banner-title">毎週のお得情報、LINEで配信中</div>
-          <div class="campaign-line-banner-desc">友だち登録するだけで、キャンペーン情報がいち早く届きます</div>
+  <!-- ===== PHILOSOPHY ===== -->
+  <section id="philosophy" class="section" style="background: var(--bg);">
+    <div class="container">
+      <div class="philosophy-inner">
+        <div class="philosophy-content fade-in-left">
+          <p class="philosophy-label">Our Philosophy</p>
+          <h2 class="section-title">私たちの想い</h2>
+          <p class="philosophy-lead">
+            <em>「一人ひとりに、</em><br>
+            <em>真摯に向き合う。」</em>
+          </p>
+          <p class="philosophy-text">
+            私たちは、お客様の笑顔を最大の喜びとして日々の業務に取り組んでいます。
+            創業から培ってきた信頼と技術を基盤に、地域社会に貢献し続けることが使命です。
+          </p>
+          <p class="philosophy-text">
+            スタッフ一人ひとりが「自分がされて嬉しいことをする」という精神を持ち、
+            お客様のニーズに寄り添ったサービスをご提供しています。
+          </p>
+          <div style="margin-top:36px;">
+            <a href="company.html" class="btn btn-primary">会社案内を見る <span class="chevron"></span></a>
+          </div>
         </div>
-      </div>
-      <div class="campaign-line-banner-btn">友だち追加 →</div>
-    </a>
 
-  </div>
-</section>
-
-<!-- ===== PHILOSOPHY ===== -->
-<section id="philosophy" class="section" style="background: var(--bg);">
-  <div class="container">
-    <div class="philosophy-inner">
-      <div class="philosophy-content fade-in-left">
-        <p class="philosophy-label">Our Philosophy</p>
-        <h2 class="section-title">私たちの想い</h2>
-        <p class="philosophy-lead">
-          <em>「一人ひとりに、</em><br>
-          <em>真摯に向き合う。」</em>
-        </p>
-        <p class="philosophy-text">
-          私たちは、お客様の笑顔を最大の喜びとして日々の業務に取り組んでいます。
-          創業から培ってきた信頼と技術を基盤に、地域社会に貢献し続けることが使命です。
-        </p>
-        <p class="philosophy-text">
-          スタッフ一人ひとりが「自分がされて嬉しいことをする」という精神を持ち、
-          お客様のニーズに寄り添ったサービスをご提供しています。
-        </p>
-        <div style="margin-top:36px;">
-          <a href="company.html" class="btn btn-primary">会社案内を見る <span class="chevron"></span></a>
-        </div>
-      </div>
-
-      <div class="philosophy-image-box fade-in-right">
-        <div class="philosophy-img-placeholder">
-          <span>ここに画像が入ります</span>
+        <div class="philosophy-image-box fade-in-right">
+          <div class="philosophy-img-placeholder">
+            <span>ここに画像が入ります</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== STORE INFO ===== -->
-<section id="store" class="section" style="background: var(--bg-white);">
-  <div class="container">
-    <div class="section-header fade-in">
-      <p class="section-title-en">Store Information</p>
+  <!-- ===== STORE INFO ===== -->
+  <section id="store" class="section" style="background: var(--bg-white);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p class="section-title-en">Store Information</p>
       <h2 class="section-title">店舗情報・アクセス</h2>
-      <p class="section-lead">佐渡島内6店舗でお待ちしています。全店9:00〜19:00・年中無休でご利用いただけます。</p>
+      <p class="section-lead">佐渡島内6店舗でお待ちしています。年中無休でご利用いただけます。</p>
       <div class="divider"></div>
-    </div>
-
-    <!-- ブランド見出し：キング -->
-    <div class="store-brand-label fade-in">ショッピングプラザ キング</div>
-
-    <!-- キング 両津店 -->
-    <div class="store-row fade-in">
-      <div class="store-row-photo">
-        <div class="store-photo-placeholder" data-label="両津店"></div>
       </div>
-      <div class="store-row-info">
-        <h3 class="store-row-name">ショッピングプラザ キング 両津店</h3>
-        <hr class="store-row-divider" />
-        <div class="store-row-details">
-          <p>営業時間：9時〜19時</p>
-          <p>定休日：なし（年中無休）</p>
-          <p>電話番号：<a href="tel:0259-23-3455">0259-23-3455</a></p>
+
+      <!-- ブランド見出し：キング -->
+      <div class="store-brand-label fade-in">ショッピングプラザ キング</div>
+
+      <!-- キング 両津店 -->
+      <div class="store-row fade-in">
+        <div class="store-row-photo">
+          <img src="images/キング両津店_外観.jpg" alt="ショッピングプラザ キング 両津店" />
         </div>
-        <p class="store-row-address">〒952-0011 新潟県佐渡市両津夷270-1</p>
-        <a href="https://maps.app.goo.gl/search/?q=ショッピングプラザキング両津店" target="_blank" rel="noopener" class="store-map-btn">地図で確認 &nbsp;→</a>
-      </div>
-    </div>
-
-    <!-- キング 佐渡サンモールタウン店 -->
-    <div class="store-row fade-in">
-      <div class="store-row-photo">
-        <div class="store-photo-placeholder" data-label="サンモールタウン店"></div>
-      </div>
-      <div class="store-row-info">
-        <h3 class="store-row-name">ショッピングプラザ キング 佐渡サンモールタウン店</h3>
+        <div class="store-row-info">
+          <h3 class="store-row-name">ショッピングプラザ キング 両津店</h3>
         <hr class="store-row-divider" />
         <div class="store-row-details">
-          <p>営業時間：9時〜19時</p>
+          <p>営業時間：9:00 - 20:00</p>
           <p>定休日：なし（年中無休）</p>
-          <p>電話番号：<a href="tel:0259-24-1831">0259-24-1831</a></p>
+            <p>電話番号：<a href="tel:0259-23-3455">0259-23-3455</a></p>
+          </div>
+          <p class="store-row-address">〒952-0011 新潟県佐渡市両津夷270-1</p>
+          <a href="https://maps.app.goo.gl/search/?q=ショッピングプラザキング両津店" target="_blank" rel="noopener"
+            class="store-map-btn">地図で確認 &nbsp;→</a>
         </div>
-        <p class="store-row-address">〒952-0028 新潟県佐渡市加茂歌代478</p>
-        <a href="https://maps.app.goo.gl/search/?q=ショッピングプラザキングサンモールタウン店" target="_blank" rel="noopener" class="store-map-btn">地図で確認 &nbsp;→</a>
       </div>
-    </div>
 
-    <!-- キング 東大通店 -->
-    <div class="store-row fade-in">
-      <div class="store-row-photo">
-        <div class="store-photo-placeholder" data-label="東大通店"></div>
-      </div>
-      <div class="store-row-info">
-        <h3 class="store-row-name">ショッピングプラザ キング 東大通店</h3>
+      <!-- キング 佐渡サンモールタウン店 -->
+      <div class="store-row fade-in">
+        <div class="store-row-photo">
+          <img src="images/キングサンモール店_外観.jpg" alt="ショッピングプラザ キング 佐渡サンモールタウン店" />
+        </div>
+        <div class="store-row-info">
+          <h3 class="store-row-name">ショッピングプラザ キング 佐渡サンモールタウン店</h3>
         <hr class="store-row-divider" />
         <div class="store-row-details">
-          <p>営業時間：9時〜19時</p>
+          <p>営業時間：9:00 - 20:00</p>
           <p>定休日：なし（年中無休）</p>
-          <p>電話番号：<a href="tel:0259-51-1211">0259-51-1211</a></p>
+            <p>電話番号：<a href="tel:0259-24-1831">0259-24-1831</a></p>
+          </div>
+          <p class="store-row-address">〒952-0028 新潟県佐渡市加茂歌代478</p>
+          <a href="https://maps.app.goo.gl/search/?q=ショッピングプラザキングサンモールタウン店" target="_blank" rel="noopener"
+            class="store-map-btn">地図で確認 &nbsp;→</a>
         </div>
-        <p class="store-row-address">〒952-1307 新潟県佐渡市東大通825</p>
-        <a href="https://maps.app.goo.gl/search/?q=ショッピングプラザキング東大通店" target="_blank" rel="noopener" class="store-map-btn">地図で確認 &nbsp;→</a>
       </div>
-    </div>
 
-    <!-- キング 相川店 -->
-    <div class="store-row fade-in">
-      <div class="store-row-photo">
-        <div class="store-photo-placeholder" data-label="相川店"></div>
-      </div>
-      <div class="store-row-info">
-        <h3 class="store-row-name">ショッピングプラザ キング 相川店</h3>
+      <!-- キング 東大通店 -->
+      <div class="store-row fade-in">
+        <div class="store-row-photo">
+          <img src="images/キング東大通店_外観.jpg" alt="ショッピングプラザ キング 東大通店" />
+        </div>
+        <div class="store-row-info">
+          <h3 class="store-row-name">ショッピングプラザ キング 東大通店</h3>
         <hr class="store-row-divider" />
         <div class="store-row-details">
-          <p>営業時間：9時〜19時</p>
+          <p>営業時間：9:00 - 20:00</p>
           <p>定休日：なし（年中無休）</p>
-          <p>電話番号：<a href="tel:0259-74-4321">0259-74-4321</a></p>
+            <p>電話番号：<a href="tel:0259-51-1211">0259-51-1211</a></p>
+          </div>
+          <p class="store-row-address">〒952-1307 新潟県佐渡市東大通825</p>
+          <a href="https://maps.app.goo.gl/search/?q=ショッピングプラザキング東大通店" target="_blank" rel="noopener"
+            class="store-map-btn">地図で確認 &nbsp;→</a>
         </div>
-        <p class="store-row-address">新潟県佐渡市相川羽田町44</p>
-        <a href="https://maps.app.goo.gl/search/?q=ショッピングプラザキング相川店" target="_blank" rel="noopener" class="store-map-btn">地図で確認 &nbsp;→</a>
       </div>
-    </div>
 
-    <!-- ブランド見出し：かしわくら -->
-    <div class="store-brand-label fade-in" style="margin-top:56px;">かしわくら</div>
-
-    <!-- かしわくら 八幡店 -->
-    <div class="store-row fade-in">
-      <div class="store-row-photo">
-        <div class="store-photo-placeholder" data-label="かしわくら 八幡店"></div>
+      <!-- キング 相川店 -->
+      <div class="store-row fade-in">
+        <div class="store-row-photo">
+          <img src="images/キング相川_外観.jpg" alt="ショッピングプラザ キング 相川店" />
+        </div>
+        <div class="store-row-info">
+          <h3 class="store-row-name">ショッピングプラザ キング 相川店</h3>
+          <hr class="store-row-divider" />
+          <div class="store-row-details">
+            <p>営業時間：9時〜19時</p>
+            <p>定休日：なし（年中無休）</p>
+            <p>電話番号：<a href="tel:0259-74-4321">0259-74-4321</a></p>
+          </div>
+          <p class="store-row-address">新潟県佐渡市相川羽田町44</p>
+          <a href="https://maps.app.goo.gl/search/?q=ショッピングプラザキング相川店" target="_blank" rel="noopener"
+            class="store-map-btn">地図で確認 &nbsp;→</a>
+        </div>
       </div>
-      <div class="store-row-info">
-        <h3 class="store-row-name">かしわくら 八幡店</h3>
+
+      <!-- ブランド見出し：かしわくら -->
+      <div class="store-brand-label fade-in" style="margin-top:56px;">かしわくら</div>
+
+      <!-- かしわくら 八幡店 -->
+      <div class="store-row fade-in">
+        <div class="store-row-photo">
+          <img src="images/かしわくら_外観.jpg" alt="かしわくら 八幡店" />
+        </div>
+        <div class="store-row-info">
+          <h3 class="store-row-name">ワクワクサンモールショッピングタウン内</h3>
         <hr class="store-row-divider" />
         <div class="store-row-details">
-          <p>営業時間：9時〜19時</p>
+          <p>営業時間：9:00 - 18:00</p>
           <p>定休日：なし（年中無休）</p>
           <p>電話番号：<a href="tel:0259-57-2356">0259-57-2356</a></p>
         </div>
-        <p class="store-row-address">〒952-1314 新潟県佐渡市八幡2120</p>
-        <a href="https://maps.app.goo.gl/search/?q=かしわくら佐渡市八幡" target="_blank" rel="noopener" class="store-map-btn">地図で確認 &nbsp;→</a>
-      </div>
-    </div>
-
-    <!-- かしわくら 東大通店 -->
-    <div class="store-row fade-in">
-      <div class="store-row-photo">
-        <div class="store-photo-placeholder" data-label="かしわくら 東大通店"></div>
-      </div>
-      <div class="store-row-info">
-        <h3 class="store-row-name">かしわくら 東大通店</h3>
-        <hr class="store-row-divider" />
-        <div class="store-row-details">
-          <p>営業時間：9時〜19時</p>
-          <p>定休日：なし（年中無休）</p>
-          <p>電話番号：<a href="tel:0259-67-7185">0259-67-7185</a></p>
+        <p class="store-row-address">〒952-0028 佐渡市加茂歌代478番地27-3071</p>
+        <a href="https://maps.app.goo.gl/search/?q=ワクワクサンモールショッピングタウン" target="_blank" rel="noopener" class="store-map-btn">地図で確認 &nbsp;→</a>
         </div>
-        <p class="store-row-address">〒952-1307 新潟県佐渡市東大通853</p>
-        <a href="https://maps.app.goo.gl/search/?q=かしわくら佐渡市東大通" target="_blank" rel="noopener" class="store-map-btn">地図で確認 &nbsp;→</a>
+      </div>
+
+      <!-- かしわくら 東大通店 -->
+      <div class="store-row fade-in">
+        <div class="store-row-photo">
+          <img src="images/かしわくら_レジ前.jpg" alt="かしわくら 東大通店" />
+        </div>
+        <div class="store-row-info">
+          <h3 class="store-row-name">かしわくら 東大通店</h3>
+          <hr class="store-row-divider" />
+          <div class="store-row-details">
+            <p>営業時間：9時〜19時</p>
+            <p>定休日：なし（年中無休）</p>
+            <p>電話番号：<a href="tel:0259-67-7185">0259-67-7185</a></p>
+          </div>
+          <p class="store-row-address">〒952-1307 新潟県佐渡市東大通853</p>
+          <a href="https://maps.app.goo.gl/search/?q=かしわくら佐渡市東大通" target="_blank" rel="noopener"
+            class="store-map-btn">地図で確認 &nbsp;→</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== LINE CTA ===== -->
+  <section id="line-cta" style="background:#06C755; padding:64px 0;">
+    <div class="container">
+      <div class="line-cta-inner fade-in">
+        <div class="line-cta-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="#fff">
+            <path
+              d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+          </svg>
+        </div>
+        <div class="line-cta-content">
+          <h2 class="line-cta-title">毎週お得な情報をLINEでお届け</h2>
+          <p class="line-cta-desc">キャンペーン・セール情報・新着お知らせをLINEで毎週配信中。<br>友だち登録してお得な情報をいち早くチェックしよう！</p>
+        </div>
+        <a href="https://lin.ee/XRO5VTy" target="_blank" rel="noopener" class="line-cta-btn">
+          友だち追加 &nbsp;→
+        </a>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- ===== LINE CTA ===== -->
-<section id="line-cta" style="background:#06C755; padding:64px 0;">
-  <div class="container">
-    <div class="line-cta-inner fade-in">
-      <div class="line-cta-icon">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="#fff"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-      </div>
-      <div class="line-cta-content">
-        <h2 class="line-cta-title">毎週お得な情報をLINEでお届け</h2>
-        <p class="line-cta-desc">キャンペーン・セール情報・新着お知らせをLINEで毎週配信中。<br>友だち登録してお得な情報をいち早くチェックしよう！</p>
-      </div>
-      <a href="https://lin.ee/XRO5VTy" target="_blank" rel="noopener" class="line-cta-btn">
-        友だち追加 &nbsp;→
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== RECRUIT (TOP) ===== -->
-<section id="recruit-top">
-  <div class="container">
-    <div class="recruit-top-simple fade-in">
-      <div>
-        <p class="recruit-top-label">Recruit</p>
-        <h2 class="recruit-top-title">一緒に働く仲間を<br>募集しています</h2>
-        <p class="recruit-top-desc">
-          佐渡島内の各店舗でスタッフを募集しています。<br>
-          勤務条件など、まずはお気軽にご確認ください。
-        </p>
-      </div>
-      <div class="recruit-top-btns">
-        <a href="recruit.html" class="btn btn-white btn-lg">採用情報を詳しく見る <span class="chevron"></span></a>
-        <a href="https://lin.ee/XRO5VTy" target="_blank" rel="noopener" class="btn btn-line-hero btn-lg">LINEで採用について問い合わせ <span class="chevron"></span></a>
+  <!-- ===== RECRUIT (TOP) ===== -->
+  <section id="recruit-top">
+    <div class="container">
+      <div class="recruit-top-simple fade-in">
+        <div>
+          <p class="recruit-top-label">Recruit</p>
+          <h2 class="recruit-top-title">一緒に働く仲間を<br>募集しています</h2>
+          <p class="recruit-top-desc">
+            佐渡島内の各店舗でスタッフを募集しています。<br>
+            勤務条件など、まずはお気軽にご確認ください。
+          </p>
+        </div>
+        <div class="recruit-top-btns">
+          <a href="recruit.html" class="btn btn-white btn-lg">採用情報を詳しく見る <span class="chevron"></span></a>
+          <a href="https://lin.ee/XRO5VTy" target="_blank" rel="noopener"
+            class="btn btn-line-hero btn-lg">LINEで採用について問い合わせ <span class="chevron"></span></a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== FOOTER ===== -->
-<footer id="footer">
-  <div class="footer-simple">
-    <div class="footer-simple-inner container">
-      <div class="footer-simple-left">
-        <span class="footer-logo-main">株式会社かしわくら</span>
-        <span class="footer-simple-address">〒952-1314 新潟県佐渡市八幡2120　TEL: 0259-57-2356</span>
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-simple">
+      <div class="footer-simple-inner container">
+        <div class="footer-simple-left">
+          <span class="footer-logo-main">株式会社かしわくら</span>
+          <span class="footer-simple-address">〒952-1314 新潟県佐渡市八幡2120　TEL: 0259-57-2356</span>
+        </div>
+        <nav class="footer-simple-nav">
+          <a href="index.html">TOP</a>
+          <a href="#store">店舗情報</a>
+          <a href="company.html">会社案内</a>
+          <a href="recruit.html">採用情報</a>
+          <a href="#">プライバシーポリシー</a>
+        </nav>
       </div>
-      <nav class="footer-simple-nav">
-        <a href="index.html">TOP</a>
-        <a href="#store">店舗情報</a>
-        <a href="company.html">会社案内</a>
-        <a href="recruit.html">採用情報</a>
-        <a href="#">プライバシーポリシー</a>
-      </nav>
+      <div class="footer-simple-bottom container">
+        <p>&copy; 2025 株式会社かしわくら. All Rights Reserved.</p>
+      </div>
     </div>
-    <div class="footer-simple-bottom container">
-      <p>&copy; 2025 株式会社かしわくら. All Rights Reserved.</p>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- ===== 浮遊LINEボタン ===== -->
-<a href="https://lin.ee/XRO5VTy" target="_blank" rel="noopener" class="float-line-btn" aria-label="LINEで最新キャンペーン情報を受け取る">
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-  <span>最新キャンペーンをLINEで受け取る</span>
-</a>
+  <!-- ===== 浮遊LINEボタン ===== -->
+  <a href="https://lin.ee/XRO5VTy" target="_blank" rel="noopener" class="float-line-btn"
+    aria-label="LINEで最新キャンペーン情報を受け取る">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff">
+      <path
+        d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
+    </svg>
+    <span>最新キャンペーンをLINEで受け取る</span>
+  </a>
 
-<script src="main.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>

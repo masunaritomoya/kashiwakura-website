@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -62,39 +62,46 @@
 <!-- ===== OVERVIEW ===== -->
 <section class="overview-section">
   <div class="container">
-    <div class="overview-grid">
-      <div class="overview-image fade-in-left">
-        <div class="store-photo-placeholder" data-label="ここに画像が入ります" style="height:100%; min-height:380px; border-radius:var(--radius-lg);"></div>
-      </div>
-      <div class="overview-text fade-in-right">
-        <h3>佐渡島とともに、<br>半世紀以上歩んできました。</h3>
-        <p>
-          かしわくらグループは1971年（昭和46年）に佐和田町でかしわくら佐和田店を開店したことに始まります。
-          創業者・柏倉義正のもと、スーパーマーケット「ショッピングプラザ キング」と衣料品店「かしわくら」を
-          佐渡島内で展開し、島の食卓と暮らしを支え続けてきました。
-        </p>
-        <p>
-          2015年には代表取締役に柏倉通子が就任。現在は佐渡市内6店舗を運営し、
-          地域に根ざした小売業として島民のみなさまの日々の生活に寄り添っています。
-        </p>
-        <div style="margin-top:28px; display:flex; gap:12px; flex-wrap:wrap;">
-          <a href="recruit.html" class="btn btn-primary">採用情報 <span class="chevron"></span></a>
-          <a href="index.html#store" class="btn btn-outline">店舗情報 <span class="chevron"></span></a>
-        </div>
+    <div class="overview-text fade-in-right" style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <h3 style="margin-bottom: 32px; font-size: 1.8rem; letter-spacing: 0.1em;">経営理念</h3>
+      <p style="font-size: 1.1rem; line-height: 2.2; margin-bottom: 24px;">
+        私達は<br>
+        企業の良心<br>
+        企業の品性<br>
+        企業の品格を重んじ<br>
+        会社の繁栄を通じて、社員とその家族の<br>
+        豊かで楽しい毎日と、その未来を守る事を<br>
+        お約束いたします。
+      </p>
+      <p style="font-size: 1.1rem; line-height: 2.2;">
+        又、社会に対しては、豊かで楽しく、<br>
+        夢のある佐渡ヶ島の実現をめざして<br>
+        日々、努力することをここに誓います。
+      </p>
+      <div style="margin-top:40px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+        <a href="recruit.html" class="btn btn-primary">採用情報 <span class="chevron"></span></a>
+        <a href="index.html#store" class="btn btn-outline">店舗情報 <span class="chevron"></span></a>
       </div>
     </div>
 
     <!-- Stats -->
     <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin-top:56px; border:1px solid var(--border-light);" class="stagger">
-      <div class="fade-in" style="padding:32px 24px; text-align:center; border-right:1px solid var(--border-light);">
+      <div class="fade-in" style="padding:32px 24px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; border-right:1px solid var(--border-light);">
         <div style="font-size:2.4rem; font-weight:900; color:var(--primary); line-height:1;">1971<span style="font-size:1rem; font-weight:700;">年</span></div>
         <div style="font-size:0.78rem; color:var(--text-muted); margin-top:8px;">創業</div>
       </div>
-      <div class="fade-in" style="padding:32px 24px; text-align:center; border-right:1px solid var(--border-light);">
-        <div style="font-size:2.4rem; font-weight:900; color:var(--primary); line-height:1;">6<span style="font-size:1rem; font-weight:700;">店舗</span></div>
-        <div style="font-size:0.78rem; color:var(--text-muted); margin-top:8px;">佐渡島内展開</div>
+      <div class="fade-in" style="padding:24px 12px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; border-right:1px solid var(--border-light); gap:12px;">
+        <div>
+          <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700; margin-bottom:4px;">食品（キング）</div>
+          <div style="font-size:1.8rem; font-weight:900; color:var(--primary); line-height:1;">4<span style="font-size:0.9rem; font-weight:700;">店舗</span></div>
+        </div>
+        <div style="width:30px; height:1px; background:var(--border-light);"></div>
+        <div>
+          <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700; margin-bottom:4px;">衣料品（ワクワク店 柏倉）</div>
+          <div style="font-size:1.8rem; font-weight:900; color:var(--primary); line-height:1;">2<span style="font-size:0.9rem; font-weight:700;">店舗</span></div>
+        </div>
       </div>
-      <div class="fade-in" style="padding:32px 24px; text-align:center;">
+      <div class="fade-in" style="padding:32px 24px; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;">
         <div style="font-size:2.4rem; font-weight:900; color:var(--primary); line-height:1;">50<span style="font-size:1.2rem; font-weight:700;">年以上</span></div>
         <div style="font-size:0.78rem; color:var(--text-muted); margin-top:8px;">島とともに歩んだ歴史</div>
       </div>
@@ -120,7 +127,7 @@
           </tr>
           <tr>
             <th>代表者</th>
-            <td>代表取締役　柏倉 通子</td>
+            <td>代表取締役　金子 範江</td>
           </tr>
           <tr>
             <th>設立</th>
@@ -133,10 +140,6 @@
           <tr>
             <th>事業内容</th>
             <td>スーパーマーケット・衣料品店の運営</td>
-          </tr>
-          <tr>
-            <th>営業時間</th>
-            <td>9:00〜19:00（年中無休）</td>
           </tr>
         </tbody>
       </table>
@@ -156,43 +159,123 @@
 
     <div class="timeline fade-in">
       <div class="timeline-item">
-        <div class="timeline-year">1971年</div>
+        <div class="timeline-year">昭和46年<br><span style="font-size:0.75em;font-weight:normal;">(1971)</span></div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
-          <div class="timeline-event">かしわくら佐和田店を開店（創業）</div>
-          <div class="timeline-desc">昭和46年、柏倉義正が佐和田町にかしわくらを創業。佐渡島での小売業に第一歩を踏み出す。</div>
+          <div class="timeline-event">創業・かしわくら佐和田店 開店</div>
+          <div class="timeline-desc">佐和田町河原田本町の外売先の家（30坪）を借り、衣料品店「かしわくら佐和田店」を開店（事実上の創業）。</div>
         </div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-year">1975年</div>
+        <div class="timeline-year">昭和49年<br><span style="font-size:0.75em;font-weight:normal;">(1974)</span></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">キング佐和田店 開店 / 法人化</div>
+          <div class="timeline-desc">11月23日、佐和田町河原田本町に食品スーパー「キング佐和田店」を開店。12月23日に「株式会社かしわくら佐和田」として法人化。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">昭和50年<br><span style="font-size:0.75em;font-weight:normal;">(1975)</span></div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
           <div class="timeline-event">株式会社かしわくら設立</div>
-          <div class="timeline-desc">昭和50年7月8日、法人として株式会社かしわくらを設立。佐渡市八幡に本社を構える。</div>
+          <div class="timeline-desc">7月8日、衣料品部門を「株式会社かしわくら」として法人化。</div>
         </div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-year">1980年代</div>
+        <div class="timeline-year">昭和54年<br><span style="font-size:0.75em;font-weight:normal;">(1979)</span></div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
-          <div class="timeline-event">スーパーマーケット「ショッピングプラザ キング」展開</div>
-          <div class="timeline-desc">食品・日用品を扱うスーパーマーケット「ショッピングプラザ キング」を佐渡市内各地に順次展開。</div>
+          <div class="timeline-event">かしわくら両津店 開店</div>
+          <div class="timeline-desc">11月18日、両津市夷に衣料品スーパー「かしわくら両津店」を開店。</div>
         </div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-year">2015年</div>
+        <div class="timeline-year">昭和56年<br><span style="font-size:0.75em;font-weight:normal;">(1981)</span></div>
         <div class="timeline-dot"></div>
         <div class="timeline-body">
-          <div class="timeline-event">柏倉通子が代表取締役に就任</div>
-          <div class="timeline-desc">二代目代表取締役として柏倉通子が就任。引き続き地域密着の経営を推進。</div>
+          <div class="timeline-event">キング両津店 開店</div>
+          <div class="timeline-desc">4月25日、両津市夷に食品スーパー「キング両津店」を開店。</div>
         </div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-year">現在</div>
+        <div class="timeline-year">昭和57年<br><span style="font-size:0.75em;font-weight:normal;">(1982)</span></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">キング相川店 開店</div>
+          <div class="timeline-desc">12月17日、相川に食品スーパー「キング相川店」を開店。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">平成11年<br><span style="font-size:0.75em;font-weight:normal;">(1999)</span></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">キング東大通店 開店</div>
+          <div class="timeline-desc">4月8日、佐和田町東大通に食品スーパー「キング東大通店」を開店。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">平成14年<br><span style="font-size:0.75em;font-weight:normal;">(2002)</span></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">キングサンモール店 開店</div>
+          <div class="timeline-desc">11月28日、両津市加茂歌代に食品スーパー「キングサンモール店」を開店。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">平成16年<br><span style="font-size:0.75em;font-weight:normal;">(2004)</span></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">かしわくら両津店 移転・リニューアル</div>
+          <div class="timeline-desc">10月、かしわくら両津店を佐渡市加茂歌代に移転、「わくわく」として開店。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">平成22年<br><span style="font-size:0.75em;font-weight:normal;">(2010)</span></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">かしわくら東大通店 開店</div>
+          <div class="timeline-desc">5月15日、かしわくら佐和田店を佐渡市東大通に移転し、「かしわくら東大通店」として開店。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">平成23年<br><span style="font-size:0.75em;font-weight:normal;">(2011)</span></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">本部移転</div>
+          <div class="timeline-desc">12月1日、かしわくらの本部を本町から八幡に移転。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">平成28年<br><span style="font-size:0.75em;font-weight:normal;">(2016)</span></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">キング佐和田店 閉店</div>
+          <div class="timeline-desc">5月31日、長年ご愛顧いただいた「キング佐和田店」を閉店。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">平成30年<br><span style="font-size:0.75em;font-weight:normal;">(2018)</span></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">各店舗リニューアル</div>
+          <div class="timeline-desc">1月に「キング東大通店」、12月に「キング相川店」をリニューアル。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">令和3年<br><span style="font-size:0.75em;font-weight:normal;">(2021)</span></div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-body">
+          <div class="timeline-event">キングサンモール店 リニューアル</div>
+          <div class="timeline-desc">1月、「キングサンモール店」をリニューアル。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">令和5年<br><span style="font-size:0.75em;font-weight:normal;">(2023)</span></div>
         <div class="timeline-dot" style="background: var(--accent);"></div>
         <div class="timeline-body">
-          <div class="timeline-event">佐渡市内6店舗を運営</div>
-          <div class="timeline-desc">スーパーマーケット「ショッピングプラザ キング」と衣料品店「かしわくら」を合わせ、佐渡市内6店舗で島の食卓と暮らしを支えています。</div>
+          <div class="timeline-event">創業者 永眠 / キング両津店 リニューアル</div>
+          <div class="timeline-desc">5月18日、創業者・柏倉義正が死去。<br>6月には「キング両津店」をリニューアルし、島の食卓と暮らしを支え続けています。</div>
         </div>
       </div>
     </div>
@@ -241,6 +324,6 @@
   <span>最新キャンペーンをLINEで受け取る</span>
 </a>
 
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

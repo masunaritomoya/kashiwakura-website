@@ -2,10 +2,10 @@
    CSS Variables & Reset
 =================================== */
 :root {
-  --primary: #6193bf;
-  --primary-dark: #4a7ba8;
-  --primary-light: #85afd0;
-  --accent: #338df4;
+  --primary: #ed6c00;
+  --primary-dark: #c45a00;
+  --primary-light: #f5a050;
+  --accent: #ed6c00;
   --accent-green: #62d847;
   --accent-green-dark: #4ab835;
   --bg: #f7f7f7;
@@ -127,7 +127,7 @@ ul { list-style: none; }
 .btn-primary:hover {
   background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(97,147,191,0.4);
+  box-shadow: 0 6px 20px rgba(237,108,0,0.4);
   opacity: 1;
 }
 
@@ -137,9 +137,9 @@ ul { list-style: none; }
 }
 
 .btn-accent:hover {
-  background: #1a7ae0;
+  background: #ed6c00;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(51,141,244,0.4);
+  box-shadow: 0 6px 20px rgba(237,108,0,0.4);
   opacity: 1;
 }
 
@@ -174,7 +174,7 @@ ul { list-style: none; }
 }
 
 .btn-white:hover {
-  background: #f0f4f8;
+  background: #fef3e8;
   opacity: 1;
   transform: translateY(-2px);
 }
@@ -299,7 +299,7 @@ ul { list-style: none; }
 }
 
 .nav-contact-btn::after { display: none !important; }
-.nav-contact-btn:hover { background: #1a7ae0 !important; opacity: 1 !important; }
+.nav-contact-btn:hover { background: #c45a00 !important; opacity: 1 !important; }
 
 /* Hamburger */
 .hamburger {
@@ -399,12 +399,36 @@ ul { list-style: none; }
   inset: 0;
 }
 
-.hero-bg img {
+.hero-bg img.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 40%;
   display: block;
+}
+
+.hero-bg img.hero-img-1 {
+  animation: heroFade1 16s infinite;
+}
+
+.hero-bg img.hero-img-2 {
+  opacity: 0;
+  animation: heroFade2 16s infinite;
+}
+
+@keyframes heroFade1 {
+  0%, 35% { opacity: 1; }
+  45%, 85% { opacity: 0; }
+  95%, 100% { opacity: 1; }
+}
+
+@keyframes heroFade2 {
+  0%, 35% { opacity: 0; }
+  45%, 85% { opacity: 1; }
+  95%, 100% { opacity: 0; }
 }
 
 .hero-overlay {
@@ -578,9 +602,9 @@ ul { list-style: none; }
   flex: 1.2;
 }
 
-.campaign-bg-1 { background: linear-gradient(135deg, #6193bf, #338df4, #85afd0); }
-.campaign-bg-2 { background: linear-gradient(135deg, #4a9cc8, #6193bf); }
-.campaign-bg-3 { background: linear-gradient(135deg, #338df4, #62d847); }
+.campaign-bg-1 { background: linear-gradient(135deg, #ed6c00, #f5a050, #c45a00); }
+.campaign-bg-2 { background: linear-gradient(135deg, #f08030, #ed6c00); }
+.campaign-bg-3 { background: linear-gradient(135deg, #ed6c00, #62d847); }
 
 .campaign-image-overlay {
   position: absolute;
@@ -741,7 +765,7 @@ ul { list-style: none; }
 .philosophy-image-main {
   width: 100%;
   height: 460px;
-  background: linear-gradient(135deg, #6193bf 0%, #338df4 50%, #62d847 100%);
+  background: linear-gradient(135deg, #ed6c00 0%, #f5a050 50%, #62d847 100%);
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
@@ -857,7 +881,7 @@ ul { list-style: none; }
 .badge-closed { background: #fce4ec; color: #c62828; }
 
 .map-box {
-  background: linear-gradient(135deg, #e8f0f8 0%, #d0dce8 100%);
+  background: linear-gradient(135deg, #fef3e8 0%, #f5d5b0 100%);
   border-radius: var(--radius-lg);
   overflow: hidden;
   min-height: 380px;
@@ -884,7 +908,7 @@ ul { list-style: none; }
    Recruit (TOP) Banner
 =================================== */
 #recruit-top {
-  background: linear-gradient(100deg, var(--primary) 0%, var(--primary-dark) 40%, #1e4a72 100%);
+  background: linear-gradient(100deg, var(--primary) 0%, var(--primary-dark) 40%, #7a3600 100%);
   color: #fff;
   padding: 80px 0;
   position: relative;
@@ -1047,7 +1071,7 @@ ul { list-style: none; }
    Page Hero (sub pages)
 =================================== */
 .page-hero {
-  background: linear-gradient(130deg, var(--primary-dark) 0%, var(--primary) 50%, #4a9cc8 100%);
+  background: linear-gradient(130deg, var(--primary-dark) 0%, var(--primary) 50%, #f08030 100%);
   color: #fff;
   padding: 110px 0 70px;
   text-align: center;
@@ -1094,7 +1118,7 @@ ul { list-style: none; }
 
 .overview-image {
   height: 380px;
-  background: linear-gradient(135deg, #6193bf, #338df4);
+  background: linear-gradient(135deg, #ed6c00, #f5a050);
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
@@ -1173,7 +1197,7 @@ ul { list-style: none; }
 .timeline::before {
   content: '';
   position: absolute;
-  left: 116px;
+  left: 120px;
   top: 0;
   bottom: 0;
   width: 2px;
@@ -1188,18 +1212,19 @@ ul { list-style: none; }
 }
 
 .timeline-year {
-  width: 116px;
+  width: 120px;
   flex-shrink: 0;
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--primary);
   text-align: right;
   padding-top: 2px;
+  padding-right: 20px;
 }
 
 .timeline-dot {
   position: absolute;
-  left: 109px;
+  left: 113px;
   top: 26px;
   width: 14px;
   height: 14px;
@@ -1445,7 +1470,7 @@ ul { list-style: none; }
 .form-select:focus,
 .form-textarea:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(97,147,191,0.15);
+  box-shadow: 0 0 0 3px rgba(237,108,0,0.15);
 }
 
 .form-textarea { resize: vertical; min-height: 130px; }
@@ -1553,7 +1578,7 @@ ul { list-style: none; }
 .store-photo-placeholder {
   width: 100%;
   height: 100%;
-  background: #e8edf2;
+  background: #fef0e0;
   min-height: 220px;
   position: relative;
 }
@@ -1699,7 +1724,7 @@ ul { list-style: none; }
 .philosophy-img-placeholder {
   width: 100%;
   height: 460px;
-  background: #e8edf2;
+  background: #fef0e0;
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
@@ -1993,9 +2018,9 @@ ul { list-style: none; }
   .company-table th { width: 120px; padding: 16px 20px; }
   .company-table td { padding: 16px 20px; }
 
-  .timeline::before { left: 80px; }
-  .timeline-year { width: 80px; font-size: 0.78rem; }
-  .timeline-dot { left: 73px; }
+  .timeline::before { left: 96px; }
+  .timeline-year { width: 96px; font-size: 0.78rem; padding-right: 18px; }
+  .timeline-dot { left: 89px; }
 
   .hero-title { font-size: clamp(1.7rem, 6vw, 2.4rem); }
 }
