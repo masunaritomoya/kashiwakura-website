@@ -2,14 +2,119 @@
 <html lang="ja">
 
 <head>
+  <!-- ============================================
+    基本設定
+    文字コード・スマホ表示・言語などの基本メタ情報
+  ============================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="株式会社かしわくら — 地域に根ざしたサービスをご提供しています。" />
-  <title>株式会社かしわくら | TOPページ</title>
+
+  <!-- ============================================
+    SEO基本設定
+    title: 検索結果に表示されるタイトル（30〜60文字が理想）
+    description: 検索結果に表示される説明文（120文字前後が理想）
+  ============================================ -->
+  <title>株式会社かしわくら | 佐渡島の地域密着スーパー・衣料品店 キング・かしわくら</title>
+  <meta name="description" content="佐渡島内6店舗を展開する地域密着型スーパー・衣料品店。新鮮な地魚・島の食材をお届けするキング、日常使いの衣料品を扱うかしわくら・わくわく。新潟県佐渡市で地域の皆さまの毎日の暮らしを支えています。" />
+
+  <!-- ============================================
+    canonical URL（重複コンテンツ対策）
+    正規のURLをGoogleに伝えるタグ。
+    TODO: ドメイン取得後に https://ドメイン名/ に変更してください
+  ============================================ -->
+  <link rel="canonical" href="https://kashiwakura-sado.jp/" />
+
+  <!-- ============================================
+    OGP（Open Graph Protocol）
+    LINE・Facebook等SNSでシェアされた際の表示を制御するタグ
+    TODO: ドメイン取得後にog:url・og:imageのURLを変更してください
+  ============================================ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="株式会社かしわくら | 佐渡島の地域密着スーパー・衣料品店" />
+  <meta property="og:description" content="佐渡島内6店舗を展開する地域密着型スーパー・衣料品店。新鮮な地魚・島の食材をお届けするキング、日常使いの衣料品を扱うかしわくら・わくわく。" />
+  <meta property="og:url" content="https://kashiwakura-sado.jp/" />
+  <meta property="og:image" content="https://kashiwakura-sado.jp/images/ogp.jpg" />
+  <meta property="og:site_name" content="株式会社かしわくら" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- ============================================
+    Twitter Card
+    Twitterでシェアされた際のカード表示を制御するタグ
+    TODO: ドメイン取得後にtwitter:imageのURLを変更してください
+  ============================================ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="株式会社かしわくら | 佐渡島の地域密着スーパー・衣料品店" />
+  <meta name="twitter:description" content="佐渡島内6店舗を展開する地域密着型スーパー・衣料品店。新鮮な地魚・島の食材をお届けするキング、日常使いの衣料品を扱うかしわくら・わくわく。" />
+  <meta name="twitter:image" content="https://kashiwakura-sado.jp/images/ogp.jpg" />
+
+  <!-- ============================================
+    JSON-LD 構造化データ（Organization + LocalBusiness）
+    GoogleのAI Overview（AIO）・リッチリザルト対応に重要。
+    会社・店舗情報を機械的に伝えるためのスキーママークアップ。
+    TODO: ドメイン取得後にurlを変更してください
+  ============================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "株式会社かしわくら",
+        "alternateName": ["キング", "かしわくら", "わくわく", "ショッピングプラザキング"],
+        "url": "https://kashiwakura-sado.jp/",
+        "description": "佐渡島内6店舗を展開する地域密着型スーパー・衣料品店",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "八幡2120",
+          "addressLocality": "佐渡市",
+          "addressRegion": "新潟県",
+          "postalCode": "952-1314",
+          "addressCountry": "JP"
+        },
+        "telephone": "0259-57-2356",
+        "areaServed": "佐渡市"
+      },
+      {
+        "@type": "GroceryStore",
+        "name": "ショッピングプラザ キング サンモール店",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "加茂歌代478",
+          "addressLocality": "佐渡市",
+          "addressRegion": "新潟県",
+          "postalCode": "952-0028",
+          "addressCountry": "JP"
+        },
+        "telephone": "0259-24-1831",
+        "openingHours": "Mo-Su 09:00-20:00"
+      },
+      {
+        "@type": "GroceryStore",
+        "name": "ショッピングプラザ キング 両津店",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "両津夷270-1",
+          "addressLocality": "佐渡市",
+          "addressRegion": "新潟県",
+          "postalCode": "952-0011",
+          "addressCountry": "JP"
+        },
+        "telephone": "0259-23-3455",
+        "openingHours": "Mo-Su 09:00-19:00"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ============================================
+    フォント読み込み（Google Fonts）
+    Noto Sans JP を使用。表示速度最適化のためpreconnectを使用。
+  ============================================ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- メインスタイルシート -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -57,12 +162,21 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-text">
+    <div class="hero-text hero-text-1">
       <span class="hero-label">新潟県佐渡市 / 地域密着スーパー</span>
       <h1 class="hero-title">佐渡の恵みを、<br>毎日の食卓へ。</h1>
       <p class="hero-desc">
         佐渡島内6店舗で、新鮮な地魚や島の食材をお届けしています。<br>
         キング・かしわくら、いつもそばにいます。
+      </p>
+    </div>
+    <div class="hero-text hero-text-2">
+      <span class="hero-label">新潟県佐渡市 / かしわくら</span>
+      <!-- 2枚目スライドはSEO上H1を使わずp要素で代替 -->
+      <p class="hero-title">毎日を、もっと<br>心地よく。</p>
+      <p class="hero-desc">
+        日々の暮らしに馴染む衣料品を、<br>
+        地域の皆さまへ丁寧にご提供しています。
       </p>
     </div>
   </div>
@@ -101,13 +215,10 @@
   <section id="philosophy" class="section" style="background: var(--bg);">
     <div class="container">
       <div class="philosophy-inner">
-        <div class="philosophy-content fade-in-left">
+        <div class="philosophy-content fade-in">
           <p class="philosophy-label">Our Philosophy</p>
           <h2 class="section-title">私たちの想い</h2>
-          <p class="philosophy-lead">
-            <em>「一人ひとりに、</em><br>
-            <em>真摯に向き合う。」</em>
-          </p>
+          <p class="philosophy-lead"><em>「一人ひとりに、<br>真摯に向き合う。」</em></p>
           <p class="philosophy-text">
             私たちは、お客様の笑顔を最大の喜びとして日々の業務に取り組んでいます。
             創業から培ってきた信頼と技術を基盤に、地域社会に貢献し続けることが使命です。
@@ -121,11 +232,6 @@
           </div>
         </div>
 
-        <div class="philosophy-image-box fade-in-right">
-          <div class="philosophy-img-placeholder">
-            <span>ここに画像が入ります</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -152,7 +258,7 @@
           <h3 class="store-row-name">ショッピングプラザ キング 両津店</h3>
         <hr class="store-row-divider" />
         <div class="store-row-details">
-          <p>営業時間：9:00 - 20:00</p>
+          <p>営業時間：9:00 - 19:00</p>
           <p>定休日：なし（年中無休）</p>
             <p>電話番号：<a href="tel:0259-23-3455">0259-23-3455</a></p>
           </div>
@@ -165,10 +271,10 @@
       <!-- キング 佐渡サンモールタウン店 -->
       <div class="store-row fade-in">
         <div class="store-row-photo">
-          <img src="images/キングサンモール店_外観.jpg" alt="ショッピングプラザ キング 佐渡サンモールタウン店" />
+          <img src="images/キングサンモール店_外観.jpg" alt="ショッピングプラザ キング サンモール店" />
         </div>
         <div class="store-row-info">
-          <h3 class="store-row-name">ショッピングプラザ キング 佐渡サンモールタウン店</h3>
+          <h3 class="store-row-name">ショッピングプラザ キング サンモール店</h3>
         <hr class="store-row-divider" />
         <div class="store-row-details">
           <p>営業時間：9:00 - 20:00</p>
@@ -209,7 +315,7 @@
           <h3 class="store-row-name">ショッピングプラザ キング 相川店</h3>
           <hr class="store-row-divider" />
           <div class="store-row-details">
-            <p>営業時間：9時〜19時</p>
+            <p>営業時間：9:00〜19:00</p>
             <p>定休日：なし（年中無休）</p>
             <p>電話番号：<a href="tel:0259-74-4321">0259-74-4321</a></p>
           </div>
@@ -225,10 +331,10 @@
       <!-- かしわくら 八幡店 -->
       <div class="store-row fade-in">
         <div class="store-row-photo">
-          <img src="images/かしわくら_外観.jpg" alt="かしわくら 八幡店" />
+          <img src="images/わくわく_外観.jpg" alt="わくわく サンモールショッピングタウン内" />
         </div>
         <div class="store-row-info">
-          <h3 class="store-row-name">ワクワクサンモールショッピングタウン内</h3>
+          <h3 class="store-row-name">わくわく（サンモールショッピングタウン内）</h3>
         <hr class="store-row-divider" />
         <div class="store-row-details">
           <p>営業時間：9:00 - 18:00</p>
@@ -243,13 +349,13 @@
       <!-- かしわくら 東大通店 -->
       <div class="store-row fade-in">
         <div class="store-row-photo">
-          <img src="images/かしわくら_レジ前.jpg" alt="かしわくら 東大通店" />
+          <img src="images/かしわくら_外観.jpg" alt="かしわくら 東大通店" />
         </div>
         <div class="store-row-info">
           <h3 class="store-row-name">かしわくら 東大通店</h3>
           <hr class="store-row-divider" />
           <div class="store-row-details">
-            <p>営業時間：9時〜19時</p>
+            <p>営業時間：9:30〜19:00</p>
             <p>定休日：なし（年中無休）</p>
             <p>電話番号：<a href="tel:0259-67-7185">0259-67-7185</a></p>
           </div>

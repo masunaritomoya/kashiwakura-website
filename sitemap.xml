@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ============================================
+  sitemap.xml
+  Googleにサイトのページ構成を伝えるファイル。
+  Google Search Consoleに登録することで
+  クロールとインデックスが促進されます。
+
+  各項目の説明:
+  - loc: ページのURL
+  - lastmod: 最終更新日（YYYY-MM-DD形式）
+  - changefreq: 更新頻度（always/daily/weekly/monthly/yearly）
+  - priority: 優先度（0.0〜1.0）トップページを1.0に設定
+
+  TODO: ドメイン取得後に全てのlocのURLを変更してください
+  TODO: 更新した際はlastmodの日付を更新してください
+  ============================================
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- トップページ -->
+  <url>
+    <loc>https://kashiwakura-sado.jp/</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 会社案内ページ -->
+  <url>
+    <loc>https://kashiwakura-sado.jp/company.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 採用情報ページ -->
+  <url>
+    <loc>https://kashiwakura-sado.jp/recruit.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

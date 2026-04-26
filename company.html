@@ -1,13 +1,85 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <!-- ============================================
+    基本設定
+    文字コード・スマホ表示の基本メタ情報
+  ============================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="株式会社かしわくらの会社案内。企業理念・沿革・会社概要をご紹介します。" />
-  <title>会社案内 | 株式会社かしわくら</title>
+
+  <!-- ============================================
+    SEO基本設定
+    title: 検索結果に表示されるタイトル（30〜60文字が理想）
+    description: 検索結果に表示される説明文（120文字前後が理想）
+  ============================================ -->
+  <title>会社案内 | 株式会社かしわくら｜佐渡市の地域密着スーパー・衣料品店</title>
+  <meta name="description" content="株式会社かしわくらの会社案内ページ。「一人ひとりに、真摯に向き合う」を理念に、新潟県佐渡市で創業。スーパーのキング・衣料品のかしわくら・わくわくを展開。企業理念・沿革・会社概要をご紹介します。" />
+
+  <!-- ============================================
+    canonical URL（重複コンテンツ対策）
+    TODO: ドメイン取得後に https://ドメイン名/company.html に変更してください
+  ============================================ -->
+  <link rel="canonical" href="https://kashiwakura-sado.jp/company.html" />
+
+  <!-- ============================================
+    OGP（Open Graph Protocol）
+    SNSでシェアされた際の表示を制御するタグ
+    TODO: ドメイン取得後にog:url・og:imageのURLを変更してください
+  ============================================ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="会社案内 | 株式会社かしわくら" />
+  <meta property="og:description" content="「一人ひとりに、真摯に向き合う」を理念に、新潟県佐渡市でスーパー・衣料品店を展開する株式会社かしわくらの会社案内。" />
+  <meta property="og:url" content="https://kashiwakura-sado.jp/company.html" />
+  <meta property="og:image" content="https://kashiwakura-sado.jp/images/ogp.jpg" />
+  <meta property="og:site_name" content="株式会社かしわくら" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- ============================================
+    Twitter Card
+    TODO: ドメイン取得後にtwitter:imageのURLを変更してください
+  ============================================ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="会社案内 | 株式会社かしわくら" />
+  <meta name="twitter:description" content="「一人ひとりに、真摯に向き合う」を理念に、新潟県佐渡市でスーパー・衣料品店を展開する株式会社かしわくらの会社案内。" />
+  <meta name="twitter:image" content="https://kashiwakura-sado.jp/images/ogp.jpg" />
+
+  <!-- ============================================
+    JSON-LD 構造化データ（Organization）
+    AIO（AI Overview）・リッチリザルト対応。
+    TODO: ドメイン取得後にurlを変更してください
+  ============================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "株式会社かしわくら",
+    "alternateName": ["キング", "かしわくら", "わくわく"],
+    "url": "https://kashiwakura-sado.jp/",
+    "description": "佐渡島内6店舗を展開する地域密着型スーパー・衣料品店",
+    "foundingDate": "1970",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "八幡2120",
+      "addressLocality": "佐渡市",
+      "addressRegion": "新潟県",
+      "postalCode": "952-1314",
+      "addressCountry": "JP"
+    },
+    "telephone": "0259-57-2356",
+    "areaServed": "佐渡市"
+  }
+  </script>
+
+  <!-- ============================================
+    フォント読み込み（Google Fonts）
+    Noto Sans JP を使用。
+  ============================================ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- メインスタイルシート -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -274,8 +346,8 @@
         <div class="timeline-year">令和5年<br><span style="font-size:0.75em;font-weight:normal;">(2023)</span></div>
         <div class="timeline-dot" style="background: var(--accent);"></div>
         <div class="timeline-body">
-          <div class="timeline-event">創業者 永眠 / キング両津店 リニューアル</div>
-          <div class="timeline-desc">5月18日、創業者・柏倉義正が死去。<br>6月には「キング両津店」をリニューアルし、島の食卓と暮らしを支え続けています。</div>
+          <div class="timeline-event">キング両津店 リニューアル</div>
+          <div class="timeline-desc">6月、「キング両津店」をリニューアルし、島の食卓と暮らしを支え続けています。</div>
         </div>
       </div>
     </div>

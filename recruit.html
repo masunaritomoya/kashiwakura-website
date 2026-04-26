@@ -1,14 +1,147 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <!-- ============================================
+    基本設定
+    文字コード・スマホ表示の基本メタ情報
+  ============================================ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="株式会社かしわくらの採用情報。営業・技術スタッフ募集中。やる気のある方大歓迎！LINEまたはお電話でお気軽にご応募ください。" />
-  <title>採用情報 | 株式会社かしわくら</title>
+
+  <!-- ============================================
+    SEO基本設定
+    title: 検索結果に表示されるタイトル（30〜60文字が理想）
+    description: 検索結果に表示される説明文（120文字前後が理想）
+  ============================================ -->
+  <title>採用情報 | 株式会社かしわくら｜佐渡市のスーパー・衣料品店スタッフ募集中</title>
+  <meta name="description" content="株式会社かしわくらの採用情報。鮮魚・精肉・惣菜・フロア・衣料品・配送など全7部門でスタッフ募集中。経験不問・やる気歓迎。佐渡エリアトップクラスの時給を目指し、職場見学・お試し採用も対応。LINEで気軽にご応募ください。" />
+
+  <!-- ============================================
+    canonical URL（重複コンテンツ対策）
+    TODO: ドメイン取得後に https://ドメイン名/recruit.html に変更してください
+  ============================================ -->
+  <link rel="canonical" href="https://kashiwakura-sado.jp/recruit.html" />
+
+  <!-- ============================================
+    OGP（Open Graph Protocol）
+    SNSでシェアされた際の表示を制御するタグ
+    TODO: ドメイン取得後にog:url・og:imageのURLを変更してください
+  ============================================ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="採用情報 | 株式会社かしわくら｜佐渡市スタッフ募集" />
+  <meta property="og:description" content="鮮魚・精肉・惣菜・フロア・衣料品・配送など全7部門で募集中。経験不問・やる気歓迎。職場見学・お試し採用も対応しています。" />
+  <meta property="og:url" content="https://kashiwakura-sado.jp/recruit.html" />
+  <meta property="og:image" content="https://kashiwakura-sado.jp/images/ogp.jpg" />
+  <meta property="og:site_name" content="株式会社かしわくら" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- ============================================
+    Twitter Card
+    TODO: ドメイン取得後にtwitter:imageのURLを変更してください
+  ============================================ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="採用情報 | 株式会社かしわくら｜佐渡市スタッフ募集" />
+  <meta name="twitter:description" content="鮮魚・精肉・惣菜・フロア・衣料品・配送など全7部門で募集中。経験不問・やる気歓迎。職場見学・お試し採用も対応しています。" />
+  <meta name="twitter:image" content="https://kashiwakura-sado.jp/images/ogp.jpg" />
+
+  <!-- ============================================
+    JSON-LD 構造化データ（JobPosting + FAQPage）
+    採用ページ専用のスキーママークアップ。
+    - JobPosting: 求人情報をGoogleに認識させる（求人リッチリザルト対応）
+    - FAQPage: よくある質問をAI Overviewに表示させる
+    TODO: ドメイン取得後にurlを変更してください
+  ============================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "JobPosting",
+        "title": "スーパー・衣料品店スタッフ（各部門）",
+        "description": "鮮魚・精肉・手造り惣菜・フロア・衣料品・アルバイト・配送など全7部門でスタッフを募集しています。経験不問、やる気のある方歓迎。職場見学・お試し採用も対応しています。",
+        "hiringOrganization": {
+          "@type": "Organization",
+          "name": "株式会社かしわくら",
+          "sameAs": "https://kashiwakura-sado.jp/"
+        },
+        "jobLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "佐渡市",
+            "addressRegion": "新潟県",
+            "addressCountry": "JP"
+          }
+        },
+        "employmentType": ["FULL_TIME", "PART_TIME"],
+        "baseSalary": {
+          "@type": "MonetaryAmount",
+          "currency": "JPY",
+          "value": {
+            "@type": "QuantitativeValue",
+            "minValue": 1050,
+            "maxValue": 1400,
+            "unitText": "HOUR"
+          }
+        },
+        "datePosted": "2026-04-01"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "未経験でも応募できますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい、全職種において経験・資格は不問です。大切なのは「やる気」と「人柄」。先輩スタッフが丁寧に教えます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "LINEで応募するとどうなりますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "LINEでメッセージを送っていただくと、担当者から返信が届きます。「応募したい」「話を聞きたい」など、一言でOKです。面接の日程などはLINE上でやりとりできます。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "パートから正社員になれますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい！正社員登用制度があり、実際に多くのスタッフがパート・アルバイトからキャリアアップしています。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "扶養内・短時間で働けますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "はい、対応可能です。週3日〜・1日4時間〜なども相談に応じます。面接時にご希望をお伝えいただければ、一緒に最適なシフトを考えます。"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ============================================
+    フォント読み込み（Google Fonts）
+    Noto Sans JP を使用。
+  ============================================ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- メインスタイルシート -->
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- ============================================
+    採用ページ専用スタイル
+    このページでのみ使用するCSS
+  ============================================ -->
   <style>
     /* ===== Recruit page extras ===== */
 
@@ -89,11 +222,11 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.72rem;
+      font-size: 1.1rem;
       font-weight: 700;
-      padding: 4px 12px;
+      padding: 6px 16px;
       border-radius: var(--radius-pill);
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
     }
 
     .dept-sales { background: rgba(51,141,244,0.15); color: var(--accent); border: 1px solid rgba(51,141,244,0.3); }
@@ -555,7 +688,6 @@
       </h2>
       <p class="recruit-intro-text">
         資格や経験は問いません。「やってみたい」「頑張りたい」というあなたのやる気を最大限に活かせる環境を用意しています。<br>
-        営業・技術・サポートなど、あなたの得意を活かせるポジションで、ぜひ一緒に働きましょう。<br>
         採用はLINEまたはお電話で受け付けています。まずはお気軽にご連絡ください！
       </p>
       <div style="display:flex; justify-content:center; gap:16px; margin-top:28px; flex-wrap:wrap;">
@@ -563,7 +695,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
           LINEで応募する
         </a>
-        <a href="tel:000-000-0000" class="btn-tel">📞 電話で問い合わせ</a>
+        <a href="tel:0259-51-1211" class="btn-tel">📞 電話で問い合わせ</a>
       </div>
     </div>
   </div>
@@ -581,18 +713,18 @@
     <div class="rf-grid rf-grid-3 stagger">
       <div class="rf-card fade-in">
         <p class="rf-num">01</p>
-        <h3 class="rf-title">テキストテキストテキスト</h3>
-        <p class="rf-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <h3 class="rf-title">キャリアアップと高い給与<br><small style="font-size:0.8rem;font-weight:500;color:var(--primary);">佐渡エリアで高い給料を目指す。それが私たちの経営方針</small></h3>
+        <p class="rf-text">頑張りはしっかり給与に反映されます。私たちは「佐渡の中で高い給料を払い続ける」ことを経営方針として掲げており、明確なキャリアパスと昇格のチャンスを用意しています。ステップアップを目指すあなたを会社全体でバックアップします。</p>
       </div>
       <div class="rf-card fade-in">
         <p class="rf-num">02</p>
-        <h3 class="rf-title">テキストテキストテキスト</h3>
-        <p class="rf-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <h3 class="rf-title">多様な働き方<br><small style="font-size:0.8rem;font-weight:500;color:var(--primary);">ライフスタイルに合わせて柔軟に。自分らしく働ける環境</small></h3>
+        <p class="rf-text">学業や家庭の都合など、プライベートを大切にしながら働けます。働く時間帯を選べるシフト制度で、あなたの希望に合わせた働き方を実現します。</p>
       </div>
       <div class="rf-card fade-in">
         <p class="rf-num">03</p>
-        <h3 class="rf-title">テキストテキストテキスト</h3>
-        <p class="rf-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <h3 class="rf-title">まずは気軽にお試しから<br><small style="font-size:0.8rem;font-weight:500;color:var(--primary);">職場見学・短期アルバイトで雰囲気を確かめてから</small></h3>
+        <p class="rf-text">「いきなり応募は不安…」という方も大丈夫。職場見学や2週間のお試し期間を設けています。夏・冬の短期アルバイトから始めるのもOK。まずは気軽にご相談ください。</p>
       </div>
     </div>
   </div>
@@ -608,101 +740,55 @@
       <div class="divider"></div>
     </div>
 
-    <!-- アルバイト（レジバイト） -->
+    <!-- 衣料品部門 -->
     <div class="job-card fade-in">
-      <div class="job-header">
+      <div class="job-header" style="background:#d81b7e;">
         <div>
-          <span class="job-dept-badge dept-sales" style="margin-bottom:8px; display:inline-flex;">アルバイト</span>
-          <h3 class="job-title">レジバイト・土日レジバイト</h3>
+          <span class="job-dept-badge" style="margin-bottom:8px;display:inline-flex;background:rgba(255,255,255,0.2);color:#fff;border-color:rgba(255,255,255,0.35);">衣料品部門</span>
+          <h3 class="job-title">フルタイム・新準フルタイム・パートタイム</h3>
         </div>
-        <span class="job-badge">パート・アルバイト</span>
-      </div>
+              </div>
       <div class="job-body">
-        <div style="display:flex; gap:16px; margin-bottom:24px; flex-wrap:wrap;">
+        <div style="display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
+          <div class="salary-card" style="border-color:#d81b7e;">
+            <div class="salary-card-label" style="color:#d81b7e;">平日時給</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#d81b7e;background:none;color:#d81b7e;">1,200<span class="salary-unit">円</span></span></div>
+          </div>
           <div class="salary-card">
-            <div class="salary-card-label">平日時給</div>
-            <div><span class="salary-highlight">1,200<span class="salary-unit">円</span></span></div>
-          </div>
-          <div class="salary-card" style="border-color: var(--accent); background: rgba(51,141,244,0.04);">
-            <div class="salary-card-label" style="color: var(--accent);">土日・17時以降</div>
-            <div><span class="salary-highlight" style="background: linear-gradient(135deg, var(--accent), #06C755); -webkit-background-clip: text; background-clip: text;">+50<span class="salary-unit">円</span></span></div>
-          </div>
-        </div>
-        <table class="job-table">
-          <tbody>
-            <tr>
-              <th>仕事内容</th>
-              <td>レジ業務（つり銭・つり札機使用のため安心）</td>
-            </tr>
-            <tr>
-              <th>勤務時間</th>
-              <td>
-                ①9:00〜13:00　②13:00〜17:00　③16:00〜20:00<br>
-                週2〜4日程度
-              </td>
-            </tr>
-            <tr>
-              <th>応募資格</th>
-              <td>高校生・主婦の方歓迎。経験不問。<br>
-                <span class="cond-tag">試用期間 時給1,050円</span>
-              </td>
-            </tr>
-            <tr>
-              <th>勤務地</th>
-              <td>キング サンモール店・東大通店・かしわくら（衣料）</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="job-footer">
-        <a href="#apply" class="btn-line">LINEで応募する</a>
-      </div>
-    </div>
-
-    <!-- フロア部門 -->
-    <div class="job-card fade-in">
-      <div class="job-header" style="background: var(--primary-dark);">
-        <div>
-          <span class="job-dept-badge dept-tech" style="margin-bottom:8px; display:inline-flex; background:rgba(255,255,255,0.15); color:#fff; border-color:rgba(255,255,255,0.3);">フロア部門</span>
-          <h3 class="job-title">フルタイム・準フルタイム・レジパート</h3>
-        </div>
-        <span class="job-badge">通勤手当あり</span>
-      </div>
-      <div class="job-body">
-        <div style="display:flex; gap:16px; margin-bottom:24px; flex-wrap:wrap;">
-          <div class="salary-card">
-            <div class="salary-card-label">平日時給</div>
-            <div><span class="salary-highlight">1,200<span class="salary-unit">円</span></span></div>
-          </div>
-          <div class="salary-card" style="border-color: var(--accent); background: rgba(51,141,244,0.04);">
-            <div class="salary-card-label" style="color: var(--accent);">土日</div>
-            <div><span class="salary-highlight" style="background: linear-gradient(135deg, var(--accent), #06C755); -webkit-background-clip: text; background-clip: text;">+50<span class="salary-unit">円</span></span></div>
+            <div class="salary-card-label">土日・17時以降</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#555;background:none;color:#555;">+50<span class="salary-unit">円</span></span></div>
           </div>
         </div>
         <table class="job-table">
           <tbody>
             <tr>
               <th>フルタイム</th>
-              <td>週休2日・40時間/週　8:00〜17:00 / 11:00〜20:00（2回）<br>業績・業務能力によって昇給あり</td>
+              <td>週休2日・40時間/週　9:00〜18:00 / 10:00〜19:00（2回）<br>業績・業務能力によって昇給あり</td>
             </tr>
             <tr>
               <th>新・準フルタイム</th>
-              <td>週休2日・31時間/週　8:00〜13:00（2回）/ 8:00〜17:00（2回）/ 15:00〜20:00（1回）<br>社会保険加入　家事が忙しい方にもオススメ</td>
+              <td>週休2日・31時間/週　9:00〜17:00（3回）/ 14:00〜19:00（2回）<br>社会保険加入。プライベートが忙しい方にもオススメ</td>
             </tr>
             <tr>
-              <th>レジパート</th>
-              <td>4日勤務・16時間/週　①9:00〜13:00　②13:00〜17:00<br>40〜50代の方・未経験OK。つり銭・つり札機使用</td>
+              <th>パートタイム</th>
+              <td>4日勤務・16時間/週<br>ライフワークバランスを大切にする方にオススメ</td>
             </tr>
             <tr>
               <th>応募資格</th>
               <td>
-                <span class="cond-tag">試用期間 時給1,000円</span>
-                <span class="cond-tag">女性も歓迎</span>
+                <span class="cond-tag">試用期間 時給1,050円</span>
               </td>
             </tr>
             <tr>
               <th>勤務地</th>
-              <td>キングサンモール店・東大通店</td>
+              <td>わくわく・かしわくら東大通店</td>
+            </tr>
+            <tr>
+              <th>その他</th>
+              <td>
+                <span class="cond-tag">交通費支給</span> フルタイム・準フルタイム・パートタイム対象<br>
+                <span class="cond-tag">各種社会保障</span> フルタイム・準フルタイム対象
+              </td>
             </tr>
           </tbody>
         </table>
@@ -714,52 +800,296 @@
 
     <!-- 鮮魚部門 -->
     <div class="job-card fade-in">
-      <div class="job-header" style="background: #1a6fa8;">
+      <div class="job-header" style="background:#0097c2;">
         <div>
-          <span class="job-dept-badge dept-cs" style="margin-bottom:8px; display:inline-flex; background:rgba(255,255,255,0.15); color:#fff; border-color:rgba(255,255,255,0.3);">鮮魚部門</span>
+          <span class="job-dept-badge" style="margin-bottom:8px;display:inline-flex;background:rgba(255,255,255,0.2);color:#fff;border-color:rgba(255,255,255,0.35);">鮮魚部門</span>
           <h3 class="job-title">技術者（経験者・未経験者）・パートタイム</h3>
         </div>
-        <span class="job-badge">通勤手当あり</span>
-      </div>
+              </div>
       <div class="job-body">
-        <div style="display:flex; gap:16px; margin-bottom:24px; flex-wrap:wrap;">
-          <div class="salary-card">
-            <div class="salary-card-label">経験者 平日時給</div>
-            <div><span class="salary-highlight">1,400<span class="salary-unit">円</span></span></div>
+        <div style="display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
+          <div class="salary-card" style="border-color:#0097c2;">
+            <div class="salary-card-label" style="color:#0097c2;">経験者 平日時給</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#0097c2;background:none;color:#0097c2;">1,400<span class="salary-unit">円</span></span></div>
+          </div>
+          <div class="salary-card" style="border-color:#0097c2;">
+            <div class="salary-card-label" style="color:#0097c2;">未経験者 平日時給</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#0097c2;background:none;color:#0097c2;">1,300<span class="salary-unit">円</span></span></div>
           </div>
           <div class="salary-card">
-            <div class="salary-card-label">未経験者 平日時給</div>
-            <div><span class="salary-highlight">1,300<span class="salary-unit">円</span></span></div>
-          </div>
-          <div class="salary-card" style="border-color: var(--accent); background: rgba(51,141,244,0.04);">
-            <div class="salary-card-label" style="color: var(--accent);">土日</div>
-            <div><span class="salary-highlight" style="background: linear-gradient(135deg, var(--accent), #06C755); -webkit-background-clip: text; background-clip: text;">+50<span class="salary-unit">円</span></span></div>
+            <div class="salary-card-label">土日</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#555;background:none;color:#555;">+50<span class="salary-unit">円</span></span></div>
           </div>
         </div>
         <table class="job-table">
           <tbody>
             <tr>
               <th>技術者（経験者）</th>
-              <td>週休2日・40時間/週　8:00〜17:00<br>魚の仕事に慣れている方歓迎。業績によって昇給あり。</td>
+              <td>週休2日・40時間/週　8:00〜17:00<br>魚の仕事に慣れている方歓迎。業績結果・業務能力によって昇給あり</td>
             </tr>
             <tr>
               <th>技術者（未経験者）</th>
-              <td>週休2日・40時間/週　8:00〜17:00<br>やる気があればOK。経験がなくても丁寧に指導します。</td>
+              <td>週休2日・40時間/週　8:00〜17:00　※夕方5時に帰れます<br>経験がなくても、やる気があればOK。未経験者OK</td>
             </tr>
             <tr>
               <th>パートタイム</th>
-              <td>4日勤務・16時間/週　8:00〜12:00　平日時給1,200円（土日+50円）<br>60代の方・魚の仕事に慣れている方歓迎</td>
+              <td>4日勤務・16時間/週　8:00〜12:00　平日時給1,200円（土日+50円）<br>60代の方・魚の仕事に慣れている方歓迎。経験者の方歓迎</td>
             </tr>
             <tr>
               <th>応募資格</th>
               <td>
                 <span class="cond-tag">試用期間 時給1,050円</span>
-                <span class="cond-tag">転勤あり（面接時に計算テストあり）</span>
+              </td>
+            </tr>
+            <tr>
+              <th>勤務地</th>
+              <td>キングサンモール店・キング東大通り店</td>
+            </tr>
+            <tr>
+              <th>その他</th>
+              <td>
+                <span class="cond-tag">交通費支給</span> フルタイム・準フルタイム・パートタイム対象<br>
+                <span class="cond-tag">各種社会保障</span> フルタイム・準フルタイム対象
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="job-footer">
+        <a href="#apply" class="btn-line">LINEで応募する</a>
+      </div>
+    </div>
+
+    <!-- 精肉部門 -->
+    <div class="job-card fade-in">
+      <div class="job-header" style="background:#d32f2f;">
+        <div>
+          <span class="job-dept-badge" style="margin-bottom:8px;display:inline-flex;background:rgba(255,255,255,0.2);color:#fff;border-color:rgba(255,255,255,0.35);">精肉部門</span>
+          <h3 class="job-title">フルタイム・新準フルタイム・パートタイム</h3>
+        </div>
+        <span class="job-badge">未経験OK</span>
+      </div>
+      <div class="job-body">
+        <div style="display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
+          <div class="salary-card" style="border-color:#d32f2f;">
+            <div class="salary-card-label" style="color:#d32f2f;">平日時給</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#d32f2f;background:none;color:#d32f2f;">1,200<span class="salary-unit">円〜</span></span></div>
+          </div>
+          <div class="salary-card">
+            <div class="salary-card-label">土日</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#555;background:none;color:#555;">+50<span class="salary-unit">円</span></span></div>
+          </div>
+        </div>
+        <table class="job-table">
+          <tbody>
+            <tr>
+              <th>フルタイム</th>
+              <td>週休2日・40時間/週　8:00〜17:00（夕方5時に帰れます）<br>業績・業務能力によって昇給あり。女性も歓迎</td>
+            </tr>
+            <tr>
+              <th>新・準フルタイム</th>
+              <td>週休2日・31時間/週　8:00〜13:00（3回）/ 8:00〜17:00（2回）<br>社会保険加入。プライベートが忙しい方にもオススメ</td>
+            </tr>
+            <tr>
+              <th>パートタイム</th>
+              <td>4日勤務・16時間/週　13:00〜17:00<br>ライフワークバランスを大切にする方にオススメ</td>
+            </tr>
+            <tr>
+              <th>応募資格</th>
+              <td>
+                <span class="cond-tag">試用期間 時給1,050円</span>
+                <span class="cond-tag">未経験OK</span>
               </td>
             </tr>
             <tr>
               <th>勤務地</th>
               <td>キングサンモール店・キング東大通店</td>
+            </tr>
+            <tr>
+              <th>その他</th>
+              <td>
+                <span class="cond-tag">交通費支給</span> フルタイム・準フルタイム・パートタイム対象<br>
+                <span class="cond-tag">各種社会保障</span> フルタイム・準フルタイム対象
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="job-footer">
+        <a href="#apply" class="btn-line">LINEで応募する</a>
+      </div>
+    </div>
+
+    <!-- 手造り惣菜部門 -->
+    <div class="job-card fade-in">
+      <div class="job-header" style="background:#2e8b3a;">
+        <div>
+          <span class="job-dept-badge" style="margin-bottom:8px;display:inline-flex;background:rgba(255,255,255,0.2);color:#fff;border-color:rgba(255,255,255,0.35);">手造り惣菜部門</span>
+          <h3 class="job-title">フルタイム・新準フルタイム・パートタイム</h3>
+        </div>
+        <span class="job-badge">未経験OK</span>
+      </div>
+      <div class="job-body">
+        <div style="display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
+          <div class="salary-card" style="border-color:#2e8b3a;">
+            <div class="salary-card-label" style="color:#2e8b3a;">平日時給</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#2e8b3a;background:none;color:#2e8b3a;">1,200<span class="salary-unit">円</span></span></div>
+          </div>
+          <div class="salary-card">
+            <div class="salary-card-label">土日</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#555;background:none;color:#555;">+50<span class="salary-unit">円</span></span></div>
+          </div>
+        </div>
+        <table class="job-table">
+          <tbody>
+            <tr>
+              <th>フルタイム</th>
+              <td>週休2日・40時間/週　8:00〜17:00（夕方5時に帰れます）<br>業績・業務能力によって昇給あり。女性も歓迎</td>
+            </tr>
+            <tr>
+              <th>新・準フルタイム</th>
+              <td>週休2日・31時間/週　8:00〜13:00（3回）/ 8:00〜17:00（2回）<br>社会保険加入。プライベートが忙しい方にもオススメ</td>
+            </tr>
+            <tr>
+              <th>パートタイム</th>
+              <td>4日勤務　①8:00〜12:30（18時間/週）　②12:30〜16:30（16時間/週）<br>50〜60代の方活躍中。ライフワークバランスを大切にする方にオススメ</td>
+            </tr>
+            <tr>
+              <th>応募資格</th>
+              <td>
+                <span class="cond-tag">試用期間 時給1,050円</span>
+                <span class="cond-tag">未経験OK</span>
+              </td>
+            </tr>
+            <tr>
+              <th>勤務地</th>
+              <td>キングサンモール店・キング東大通り店</td>
+            </tr>
+            <tr>
+              <th>その他</th>
+              <td>
+                <span class="cond-tag">交通費支給</span> フルタイム・準フルタイム・パートタイム対象<br>
+                <span class="cond-tag">各種社会保障</span> フルタイム・準フルタイム対象
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="job-footer">
+        <a href="#apply" class="btn-line">LINEで応募する</a>
+      </div>
+    </div>
+
+    <!-- フロア部門 -->
+    <div class="job-card fade-in">
+      <div class="job-header" style="background:#e05c3a;">
+        <div>
+          <span class="job-dept-badge" style="margin-bottom:8px;display:inline-flex;background:rgba(255,255,255,0.2);color:#fff;border-color:rgba(255,255,255,0.35);">フロア部門</span>
+          <h3 class="job-title">フルタイム・新準フルタイム・レジパート</h3>
+
+        </div>
+              </div>
+      <div class="job-body">
+        <div style="display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
+          <div class="salary-card" style="border-color:#e05c3a;">
+            <div class="salary-card-label" style="color:#e05c3a;">平日時給</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#e05c3a;background:none;color:#e05c3a;">1,200<span class="salary-unit">円</span></span></div>
+          </div>
+          <div class="salary-card">
+            <div class="salary-card-label">土日</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#555;background:none;color:#555;">+50<span class="salary-unit">円</span></span></div>
+          </div>
+        </div>
+        <table class="job-table">
+          <tbody>
+            <tr>
+              <th>フルタイム</th>
+              <td>週休2日・40時間/週　8:00〜17:00 / 11:00〜20:00（2回）<br>業績・業務能力によって昇給あり。女性も歓迎</td>
+            </tr>
+            <tr>
+              <th>新・準フルタイム</th>
+              <td>週休2日・31時間/週　8:00〜13:00（2回）/ 8:00〜17:00（2回）/ 15:00〜20:00（1回）<br>社会保険加入。家事が忙しい方にもオススメ</td>
+            </tr>
+            <tr>
+              <th>レジパート</th>
+              <td>4日勤務・16時間/週　①9:00〜13:00　②13:00〜17:00<br>40〜50代の方・未経験OK。つり銭・つり札機なので安心</td>
+            </tr>
+            <tr>
+              <th>応募資格</th>
+              <td>
+                <span class="cond-tag">試用期間 時給1,050円</span>
+                <span class="cond-tag">家事が忙しい方歓迎</span>
+              </td>
+            </tr>
+            <tr>
+              <th>勤務地</th>
+              <td>キングサンモール店・東大通店</td>
+            </tr>
+            <tr>
+              <th>その他</th>
+              <td>
+                <span class="cond-tag">交通費支給</span> フルタイム・準フルタイム・パートタイム対象<br>
+                <span class="cond-tag">各種社会保障</span> フルタイム・準フルタイム対象
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="job-footer">
+        <a href="#apply" class="btn-line">LINEで応募する</a>
+      </div>
+    </div>
+
+    <!-- アルバイト -->
+    <div class="job-card fade-in">
+      <div class="job-header" style="background:#0097c2;">
+        <div>
+          <span class="job-dept-badge" style="margin-bottom:8px;display:inline-flex;background:rgba(255,255,255,0.2);color:#fff;border-color:rgba(255,255,255,0.35);">アルバイト</span>
+          <h3 class="job-title">青果袋詰・商品出庫・レジ担当</h3>
+        </div>
+        <span class="job-badge">主婦・学生歓迎</span>
+      </div>
+      <div class="job-body">
+        <div style="display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
+          <div class="salary-card" style="border-color:#0097c2;">
+            <div class="salary-card-label" style="color:#0097c2;">平日時給</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#0097c2;background:none;color:#0097c2;">1,050<span class="salary-unit">円〜</span></span></div>
+          </div>
+          <div class="salary-card">
+            <div class="salary-card-label">土日</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#555;background:none;color:#555;">+50<span class="salary-unit">円</span></span></div>
+          </div>
+        </div>
+        <table class="job-table">
+          <tbody>
+            <tr>
+              <th>青果袋詰担当</th>
+              <td>8:00〜12:00（週4日勤務、木・土・日休み）　時給1,050円<br>50・60代の方歓迎。普段お買い物している主婦の方歓迎。レジ業務なし</td>
+            </tr>
+            <tr>
+              <th>商品出庫担当（通年）</th>
+              <td>9:00〜12:00（週5日勤務、水・日曜日・休み）　時給1,200円<br>商品倉庫から店舗に出庫する商品のピッキング。店舗の研修があります</td>
+            </tr>
+            <tr>
+              <th>レジ担当（通年）</th>
+              <td>①9:00〜13:00　②13:00〜17:00（週2〜4日程度）　時給1,200円<br>主婦の方歓迎。時間帯を選べます。つり銭・つり札機なので安心</td>
+            </tr>
+            <tr>
+              <th>応募資格</th>
+              <td>
+                <span class="cond-tag">試用期間 時給1,050円</span>
+              </td>
+            </tr>
+            <tr>
+              <th>勤務地</th>
+              <td>キングサンモール店・キング東大通店・八幡商品部</td>
+            </tr>
+            <tr>
+              <th>その他</th>
+              <td>
+                <span class="cond-tag">交通費支給</span> フルタイム・準フルタイム・パートタイム対象<br>
+                <span class="cond-tag">各種社会保障</span> フルタイム・準フルタイム対象
+              </td>
             </tr>
           </tbody>
         </table>
@@ -771,37 +1101,36 @@
 
     <!-- 配送部門 -->
     <div class="job-card fade-in">
-      <div class="job-header" style="background: #5a3a6e;">
+      <div class="job-header" style="background:#7b3fa0;">
         <div>
-          <span class="job-dept-badge" style="margin-bottom:8px; display:inline-flex; background:rgba(255,255,255,0.15); color:#ddb8ff; border-color:rgba(221,184,255,0.4);">配送部門</span>
+          <span class="job-dept-badge" style="margin-bottom:8px;display:inline-flex;background:rgba(255,255,255,0.2);color:#fff;border-color:rgba(255,255,255,0.35);">配送部門</span>
           <h3 class="job-title">魚市場配送・準フルタイム・パートタイム</h3>
         </div>
-        <span class="job-badge">通勤手当あり</span>
-      </div>
+              </div>
       <div class="job-body">
-        <div style="display:flex; gap:16px; margin-bottom:24px; flex-wrap:wrap;">
-          <div class="salary-card">
-            <div class="salary-card-label">平日時給</div>
-            <div><span class="salary-highlight">1,200<span class="salary-unit">円</span></span></div>
+        <div style="display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap;">
+          <div class="salary-card" style="border-color:#7b3fa0;">
+            <div class="salary-card-label" style="color:#7b3fa0;">平日時給</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#7b3fa0;background:none;color:#7b3fa0;">1,200<span class="salary-unit">円</span></span></div>
           </div>
-          <div class="salary-card" style="border-color: var(--accent); background: rgba(51,141,244,0.04);">
-            <div class="salary-card-label" style="color: var(--accent);">土日</div>
-            <div><span class="salary-highlight" style="background: linear-gradient(135deg, var(--accent), #06C755); -webkit-background-clip: text; background-clip: text;">+50<span class="salary-unit">円</span></span></div>
+          <div class="salary-card">
+            <div class="salary-card-label">土日</div>
+            <div><span class="salary-highlight" style="-webkit-text-fill-color:#555;background:none;color:#555;">+50<span class="salary-unit">円</span></span></div>
           </div>
         </div>
         <table class="job-table">
           <tbody>
             <tr>
               <th>魚市場配送</th>
-              <td>週3〜4日程度　7:00〜12:00<br>65才まで応募可能。両津エリアにお住まいの方歓迎。</td>
+              <td>週3〜4日程度　7:00〜12:00<br>65才まで応募可能。元気な女性でも可能。両津エリアにお住まいの方歓迎</td>
             </tr>
             <tr>
               <th>準フルタイム</th>
-              <td>8:00〜13:00（3日）・8:00〜17:00（2日）　週31時間程度<br>佐渡汽船からキング各店に荷物を運びます。体力に自信のある方・男女ともに歓迎。</td>
+              <td>8:00〜13:00（3日）/ 8:00〜17:00（2日）　週31時間程度<br>佐渡汽船からキング各店に荷物を運びます。体力に自信のある方・男女ともに歓迎</td>
             </tr>
             <tr>
               <th>パートタイム</th>
-              <td>週3〜4日　8:00〜13:00<br>ライフワークバランスを大切にする方にオススメ。65才まで応募可能。</td>
+              <td>週3〜4日　8:00〜13:00<br>ライフワークバランスを大切にする方にオススメ。65才まで応募可能</td>
             </tr>
             <tr>
               <th>応募資格</th>
@@ -814,6 +1143,13 @@
               <th>勤務地</th>
               <td>かしわくら東大通店</td>
             </tr>
+            <tr>
+              <th>その他</th>
+              <td>
+                <span class="cond-tag">交通費支給</span> フルタイム・準フルタイム・パートタイム対象<br>
+                <span class="cond-tag">各種社会保障</span> フルタイム・準フルタイム対象
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -825,117 +1161,7 @@
   </div>
 </section>
 
-<!-- ===== COMMON CONDITIONS ===== -->
-<section class="section" style="background: var(--bg);">
-  <div class="container">
-    <div class="section-header fade-in">
-      <p class="section-title-en">Working Conditions</p>
-      <h2 class="section-title">共通の待遇・条件</h2>
-      <p class="section-lead">全職種共通の勤務条件・待遇です。</p>
-      <div class="divider"></div>
-    </div>
 
-    <div class="fade-in">
-      <table class="conditions-table">
-        <tbody>
-          <tr>
-            <th>給与</th>
-            <td>
-              <strong>平日：時給 1,300円</strong><br>
-              <strong>土日：時給 1,350円（+50円）</strong><br>
-              ※経験・スキルにより優遇あり　※昇給制度あり（年1回）
-            </td>
-          </tr>
-          <tr>
-            <th>勤務時間</th>
-            <td>
-              <strong>8:00〜17:00（実働8時間）</strong><br>
-              ※休憩60分含む / 残業は月10時間以内を目標に管理
-            </td>
-          </tr>
-          <tr>
-            <th>勤務日数</th>
-            <td>
-              <strong>週5日・週40時間</strong>（週休2日制）<br>
-              ※一部ポジションは週3日〜・短時間勤務相談可
-            </td>
-          </tr>
-          <tr>
-            <th>休日・休暇</th>
-            <td>
-              土曜・日曜・祝日休み（年間休日120日）<br>
-              有給休暇あり / 慶弔休暇 / 産育休（取得実績あり）
-            </td>
-          </tr>
-          <tr>
-            <th>交通費</th>
-            <td>全額支給（規定上限なし）</td>
-          </tr>
-          <tr>
-            <th>社会保険</th>
-            <td>雇用・健康・厚生年金・労災（条件を満たす場合）</td>
-          </tr>
-          <tr>
-            <th>その他待遇</th>
-            <td>
-              制服貸与 / 社員割引制度あり<br>
-              正社員登用制度（実績多数） / 研修・OJT制度
-            </td>
-          </tr>
-          <tr>
-            <th>勤務地</th>
-            <td>○○県○○市内の各店舗・現場（転勤なし）</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SELECTION CRITERIA ===== -->
-<section class="section" style="background: var(--bg-white);">
-  <div class="container">
-    <div class="section-header fade-in">
-      <p class="section-title-en">Who We're Looking For</p>
-      <h2 class="section-title">こんな方を求めています</h2>
-      <p class="section-lead">資格や経験よりも「人柄」と「やる気」を重視しています。</p>
-      <div class="divider"></div>
-    </div>
-
-    <div class="rf-grid rf-grid-2 stagger">
-      <div class="rf-card fade-in">
-        <div class="rf-check">✓</div>
-        <h4 class="rf-title">テキストテキストテキスト</h4>
-        <p class="rf-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      </div>
-      <div class="rf-card fade-in">
-        <div class="rf-check">✓</div>
-        <h4 class="rf-title">テキストテキストテキスト</h4>
-        <p class="rf-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      </div>
-      <div class="rf-card fade-in">
-        <div class="rf-check">✓</div>
-        <h4 class="rf-title">テキストテキストテキスト</h4>
-        <p class="rf-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      </div>
-      <div class="rf-card fade-in">
-        <div class="rf-check">✓</div>
-        <h4 class="rf-title">テキストテキストテキスト</h4>
-        <p class="rf-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      </div>
-      <div class="rf-card fade-in">
-        <div class="rf-check">✓</div>
-        <h4 class="rf-title">テキストテキストテキスト</h4>
-        <p class="rf-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      </div>
-      <div class="rf-card fade-in">
-        <div class="rf-check">✓</div>
-        <h4 class="rf-title">テキストテキストテキスト</h4>
-        <p class="rf-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ===== RECRUITMENT FLOW ===== -->
 <section class="section" style="background: var(--bg);">
@@ -969,43 +1195,9 @@
         <p class="rf-text">採用後は研修からスタート。先輩が丁寧にサポートします。</p>
       </div>
     </div>
-    <p style="text-align:center; font-size:0.82rem; color:var(--text-muted); margin-top:20px; max-width:960px; margin-left:auto; margin-right:auto;" class="fade-in">
-      ※テキストテキスト。必要であれば入力可能。
-    </p>
   </div>
 </section>
 
-<!-- ===== STAFF VOICES ===== -->
-<section class="section" style="background: var(--bg-white);">
-  <div class="container">
-    <div class="section-header fade-in">
-      <p class="section-title-en">Staff Voice</p>
-      <h2 class="section-title">スタッフの声</h2>
-      <div class="divider"></div>
-    </div>
-
-    <div class="rf-grid rf-grid-3 stagger">
-      <div class="rf-card fade-in">
-        <div class="rf-quote-mark">"</div>
-        <p class="rf-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <div class="rf-quote-name">田中 さん</div>
-        <div class="rf-quote-role">入社3年目 / スタッフ</div>
-      </div>
-      <div class="rf-card fade-in">
-        <div class="rf-quote-mark">"</div>
-        <p class="rf-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <div class="rf-quote-name">鈴木 さん</div>
-        <div class="rf-quote-role">入社4年目 / スタッフ</div>
-      </div>
-      <div class="rf-card fade-in">
-        <div class="rf-quote-mark">"</div>
-        <p class="rf-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <div class="rf-quote-name">佐藤 さん</div>
-        <div class="rf-quote-role">入社5年目 / スタッフ</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ===== FAQ ===== -->
 <section class="section" style="background: var(--bg);">
@@ -1110,7 +1302,7 @@
           「採用について」とお伝えください。担当者がお答えします。
           <span class="rf-apply-note">受付時間：8:00〜17:00（土日祝含む）</span>
         </p>
-        <a href="tel:0259-57-2356" class="btn-tel">0259-57-2356</a>
+        <a href="tel:0259-51-1211" class="btn-tel">0259-51-1211</a>
       </div>
     </div>
   </div>
@@ -1122,7 +1314,7 @@
     <div class="footer-simple-inner container">
       <div class="footer-simple-left">
         <span class="footer-logo-main">株式会社かしわくら</span>
-        <span class="footer-simple-address">〒952-1314 新潟県佐渡市八幡2120　TEL: 0259-57-2356</span>
+        <span class="footer-simple-address">〒952-1314 新潟県佐渡市八幡2120　TEL: 0259-51-1211</span>
       </div>
       <nav class="footer-simple-nav">
         <a href="index.html">TOP</a>
@@ -1145,7 +1337,7 @@
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
     LINEで応募
   </a>
-  <a href="tel:0259-57-2356" class="btn-tel" style="padding:10px 20px; font-size:0.88rem;">0259-57-2356</a>
+  <a href="tel:0259-51-1211" class="btn-tel" style="padding:10px 20px; font-size:0.88rem;">0259-51-1211</a>
 </div>
 
 <script src="js/main.js"></script>

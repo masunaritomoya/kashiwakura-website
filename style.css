@@ -453,6 +453,28 @@ ul { list-style: none; }
 .hero-text {
   color: #fff;
   max-width: 580px;
+  position: absolute;
+}
+
+.hero-text-1 {
+  animation: heroText1 16s infinite;
+}
+
+.hero-text-2 {
+  opacity: 0;
+  animation: heroText2 16s infinite;
+}
+
+@keyframes heroText1 {
+  0%, 35%   { opacity: 1; }
+  45%, 85%  { opacity: 0; }
+  95%, 100% { opacity: 1; }
+}
+
+@keyframes heroText2 {
+  0%, 35%   { opacity: 0; }
+  45%, 85%  { opacity: 1; }
+  95%, 100% { opacity: 0; }
 }
 
 .hero-label {
@@ -685,8 +707,10 @@ ul { list-style: none; }
 
 .philosophy-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  max-width: 760px;
+  margin: 0 auto;
   align-items: center;
 }
 
@@ -908,7 +932,7 @@ ul { list-style: none; }
    Recruit (TOP) Banner
 =================================== */
 #recruit-top {
-  background: linear-gradient(100deg, var(--primary) 0%, var(--primary-dark) 40%, #7a3600 100%);
+  background: var(--primary);
   color: #fff;
   padding: 80px 0;
   position: relative;
@@ -1348,7 +1372,7 @@ ul { list-style: none; }
   justify-content: space-between;
 }
 
-.job-title { font-size: 1.15rem; font-weight: 700; }
+.job-title { font-size: 0.95rem; font-weight: 600; opacity: 0.9; }
 
 .job-badge {
   background: rgba(255,255,255,0.2);
