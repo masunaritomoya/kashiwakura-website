@@ -1347,12 +1347,13 @@
   const applySection = document.getElementById('apply');
   if (applyBar && applySection) {
     const obs = new IntersectionObserver(entries => {
-      applyBar.style.display = entries[0].isIntersecting ? 'none' : 'flex';
+      const visible = !entries[0].isIntersecting;
+      applyBar.style.display = visible ? 'flex' : 'none';
+      document.body.style.paddingBottom = visible ? '72px' : '0';
     }, { threshold: 0.1 });
     obs.observe(applySection);
   }
 
-  // Add bottom padding to body for apply bar
   document.body.style.paddingBottom = '72px';
 </script>
 </body>
