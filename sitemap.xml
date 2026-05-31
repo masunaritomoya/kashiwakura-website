@@ -20,7 +20,7 @@
 
   <!-- トップページ -->
   <url>
-    <loc>https://kashiwakura-sado.jp/</loc>
+    <loc>https://masunaritomoya.github.io/kashiwakura-website/</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -28,7 +28,7 @@
 
   <!-- 会社案内ページ -->
   <url>
-    <loc>https://kashiwakura-sado.jp/company.html</loc>
+    <loc>https://masunaritomoya.github.io/kashiwakura-website/company.html</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -36,7 +36,7 @@
 
   <!-- 採用情報ページ -->
   <url>
-    <loc>https://kashiwakura-sado.jp/recruit.html</loc>
+    <loc>https://masunaritomoya.github.io/kashiwakura-website/recruit.html</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

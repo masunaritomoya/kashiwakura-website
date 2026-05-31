@@ -15,4 +15,4 @@ User-agent: *
 Allow: /
 
 # サイトマップの場所を指定
-Sitemap: https://kashiwakura-sado.jp/sitemap.xml
+Sitemap: https://masunaritomoya.github.io/kashiwakura-website/sitemap.xml
